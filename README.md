@@ -70,7 +70,6 @@ Thank you for your interest in our program. Y̵̡̢̪̣̦̤̺͔̜̞͔̭̭̩͂͜�
 <br/>
 <br/>
 
-
 # MVP
 
 ## User Auth
@@ -79,14 +78,14 @@ Thank you for your interest in our program. Y̵̡̢̪̣̦̤̺͔̜̞͔̭̭̩͂͜�
 
 ## Questionnaire
 * fetch questions from db
-* accept and handle responses
+* Accept responses and handle updates to user's stats
 
 ## Game Logic
-* translate answers into user stats
 * small puzzles in between sets of questions
+* puzzle results update user's stats
 
 ## User Show
-* Displays current run progress, previous run stats
+* Displays current run progress, previous run stats (ie: number of questions(/puzzles), final sanity stat)
 * Buttons to continue current run & start over
 
 
@@ -96,7 +95,6 @@ Thank you for your interest in our program. Y̵̡̢̪̣̦̤̺͔̜̞͔̭̭̩͂͜�
 
 ***
 ***
-
 # Contributors
 * Brad Larson - Team Leader, Creative Director
 * Chris Bram - Frontend Lead
@@ -104,32 +102,30 @@ Thank you for your interest in our program. Y̵̡̢̪̣̦̤̺͔̜̞͔̭̭̩͂͜�
 * Gio Chomakhashvili - Flex 
 
 ## Day 1
+* Decide db data/structure - All
 * Build Skeleton React Site - Chris
 * Build/connect MongoDb - Dennis
 * Investigate atmospheric design elements - Gio
 * Build Splash page/session forms - Brad (& Gio)
 
 ## Day 2
-* Decide db data/structure - All
 * Connect react app to database - Dennis & Chris
 * Seed Question db - Brad
 * Build question show page - Gio
 
+
 ## Day 3
 * Connect question show page to db - Chris & Gio
 * Handle response processing - Dennis & Brad
+* Discuss project progress/ TODOs - All
 
 ## Day 4
-* Discuss project progress/ TODOs - All
-* **BONUS** 
-  * add more complex questions / small puzzles to question db
-  * outfit questions show page to accommodate more complex user inputs
-
-## Day 5
 * Production README
 * finalize CSS/styling
 * finish testing & debugging
-
+* **BONUS** 
+  * add more complex questions / small puzzles to question db
+  * outfit questions show page to accommodate more complex user inputs
 
 
 
