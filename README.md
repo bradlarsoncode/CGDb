@@ -110,6 +110,7 @@ Thank you for your interest in our program. Y̵̡̢̪̣̦̤̺͔̜̞͔̭̭̩͂͜�
 
 ## Day 2
 * Connect react app to database - Dennis & Chris
+* Flesh out routes and rendered components - Chris
 * Seed Question db - Brad
 * Build question show page - Gio
 
@@ -156,3 +157,14 @@ A record of our "volunteers" and questionnaires will be kept on our backend.
 Our frontend will be incharge of retreiving our volunteer's data and presenting them with a questionnaire.
 Volunteer's sanity will also be tracked through our frontend.
 Visual effects and puzzles will be diplayed through the use of css styling and Canvas.
+
+
+## Technical Challenges
+
+Difficilties with feature implementation involve setting up proper communcation between the various frontend and backend technologies, adding visual/audio stlye to the frontend components, as well as maintaining adequate communication between contributors via remote locations. Particularly challenging problems (and subsequent solutions) will be listed below:
+
+
+
+
+***
+***
