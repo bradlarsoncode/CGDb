@@ -8,16 +8,17 @@ import MainPage from './main/main_page';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 import Home from './home/home';
+import Modal from './modal/modal';
 
 
 const App = () => (
   <div>
     <NavBarContainer />
-    <Switch>
-        <AuthRoute exact path="/" component={MainPage} />
-        <AuthRoute exact path="/login" component={LoginFormContainer} />
-        <AuthRoute exact path="/signup" component={SignupFormContainer} />
-    </Switch>
+    <Modal />
+    <AuthRoute exact path="/" component={MainPage} />
+        {/* <AuthRoute exact path="/login" component={LoginFormContainer} />
+        <AuthRoute exact path="/signup" component={SignupFormContainer} /> */}
+    
         {/* <ProtectedRoute path="/" component={Home} /> */}
         <Home />
   </div>
