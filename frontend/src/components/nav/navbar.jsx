@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./navbar.scss";
+import logoPath from "../../assets/bramcollegeclear.png";
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -24,6 +25,7 @@ class Navbar extends React.Component {
       );
     } else {
       return (
+
         <div>
           {/* <Link to={"/signup"}>Signup</Link>
           <Link to={"/login"}>Login</Link> */}
@@ -38,7 +40,11 @@ class Navbar extends React.Component {
   render() {
     return (
       <nav className="navbar">
-        <h1>CGDb</h1>
+        {/*<h1>CGDb</h1>*/}
+        <div className="logo-assets">
+          <img src={logoPath} alt="logo" />
+          <h1>BRAM COLLEGE</h1>
+        </div>
         {this.getLinks()}
       </nav>
     );
