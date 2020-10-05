@@ -98,6 +98,8 @@ A record of our "volunteers" and questionnaires will be kept on our backend.
 ## Frontend
 - React
 - Node.js
+- Canvas
 
 Our frontend will be incharge of retreiving our volunteer's data and presenting them with a questionnaire.
 Volunteer's sanity will also be tracked through our frontend.
+Visual effects and puzzles will be diplayed through the use of css styling and Canvas.
