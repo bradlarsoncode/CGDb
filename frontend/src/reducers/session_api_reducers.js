@@ -24,7 +24,8 @@ case RECEIVE_USER_LOGOUT:
 case RECEIVE_USER_SIGN_IN:
  return {
    ...state,
-   isSignedIn: true
+   isSignedIn: true,
+   
  }
 default:
  return state;
