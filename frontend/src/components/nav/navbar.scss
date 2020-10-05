@@ -1,8 +1,31 @@
+$blue: #0c213a;
+$gold: #b8995c;
+$red: #7e1b1b;
+
 .navbar {
-  background-color: rgba(8, 73, 163, 0.8);
+  background-color: rgba($blue, 0.3);
   width: 100%;
   color: white;
-  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .logo-assets {
+    display: flex;
+    align-items: center;
+    img {
+      width: auto;
+      height: 150px;
+    }
+  }
+
+  h1 {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .nav-login-links {
+  }
 }
 
 
