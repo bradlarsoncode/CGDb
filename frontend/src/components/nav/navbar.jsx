@@ -25,9 +25,13 @@ class Navbar extends React.Component {
       );
     } else {
       return (
-        <div className="nav-login-links">
-          <Link to={"/signup"}>Signup</Link>
-          <Link to={"/login"}>Login</Link>
+
+        <div>
+          {/* <Link to={"/signup"}>Signup</Link>
+          <Link to={"/login"}>Login</Link> */}
+          <button onClick={() => this.props.openModal('signup')}>Sign Up</button>
+          <button onClick={() => this.props.openModal('login')}>Log In</button>
+
         </div>
       );
     }
