@@ -10,7 +10,6 @@ import SignupFormContainer from "./session/signup_form_container";
 import "../App.scss";
 import BackgroundVideo from "./landing/background-video";
         
-import Home from './home/home';
 import Modal from './modal/modal';
 
 
@@ -27,7 +26,7 @@ const App = () => (
         <AuthRoute exact path="/signup" component={SignupFormContainer} /> */}
     
         {/* <ProtectedRoute path="/" component={Home} /> */}
-        <Home />
+        <MainPage />
 
   </div>
 );
