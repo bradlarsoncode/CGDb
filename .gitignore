@@ -1,6 +1,7 @@
 
 /config/keys.js
 /node_modules
+/.idea
 
 
 
@@ -108,3 +109,5 @@ dist
 
 # TernJS port file
 .tern-port
+/config/
+/.idea/
