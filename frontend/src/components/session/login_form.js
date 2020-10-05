@@ -19,7 +19,7 @@ class LoginForm extends React.Component {
   // TODO: Once the user has been authenticated, redirect to ___?
   componentWillReceiveProps(nextProps) {
     if (nextProps.currentUser === true) {
-      this.props.history.push('/tweets');
+      this.props.history.push('/');
     }
 
     this.setState({errors: nextProps.errors})
