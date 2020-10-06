@@ -22,12 +22,17 @@
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^3.0.0",
     "mongoose": "^5.10.7",
+    "mongoose-data-seed": "^2.1.6",
     "node-sass": "^4.14.1",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "validator": "^13.1.17"
   },
   "devDependencies": {
+    "babel-plugin-add-module-exports": "^1.0.4",
     "nodemon": "^2.0.4"
+  },
+  "mdSeed": {
+    "seedersFolder": "./seeders"
   }
 }
