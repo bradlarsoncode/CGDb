@@ -113,3 +113,4 @@ dist
 /config/
 /.idea/
 .DS_Store
+!/frontend/package-lock.json
