@@ -1,4 +1,5 @@
 import React from "react";
+import CustomAlert from "../modal/alerts";
 import { withRouter } from "react-router-dom";
 
 class LoginForm extends React.Component {

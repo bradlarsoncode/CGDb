@@ -1,4 +1,6 @@
 import React from "react";
+import CustomAlert from "../modal/alerts";
+
 import { Link } from "react-router-dom";
 import "./navbar.scss";
 import logoPath from "../../assets/bramcollegeclear.png";
@@ -13,11 +15,13 @@ class Navbar extends React.Component {
 
   logoutUser(e) {
     e.preventDefault();
+    this.props.alertLogout();
     this.props.logout();
   }
 
   getLinks() {
     if (this.props.loggedIn) {
+      this.props.alertLogin(this.props.currUser.name);
       return (
         <nav className="navbar">
           <div className="logo-assets">
@@ -38,6 +42,7 @@ class Navbar extends React.Component {
               </button>
             </div>
           </div>
+          <CustomAlert />
         </nav>
       );
     } else {
@@ -68,6 +73,7 @@ class Navbar extends React.Component {
               </button>
             </div>
           </div>
+          <CustomAlert />
         </nav>
       );
     }
