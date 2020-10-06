@@ -2,6 +2,11 @@ $blue: #0c213a;
 $gold: #b8995c;
 $red: #7e1b1b;
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html,
 body {
   font-family: sans-serif;
@@ -47,4 +52,3 @@ a {
   justify-content: center;
   align-items: center;
 }
-

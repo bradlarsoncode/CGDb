@@ -23,9 +23,86 @@ $red: #7e1b1b;
     margin: 0;
     padding: 10px;
   }
+}
 
-  .nav-login-links {
+.btn-link {
+  position: relative;
+  display: inline-block;
+  margin: 0 10px;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &:before {
+    background-color: #00ffff;
+    z-index: -1;
+  }
+
+  &:after {
+    background-color: #b47fb5;
+    z-index: -2;
+  }
+
+  &:hover {
+    .link-inner {
+      animation: glitchy 0.3s ease 1;
+    }
+
+    &:before {
+      animation: glitchy 0.3s ease 0.3s infinite;
+    }
+
+    &:after {
+      animation: glitchy 0.3s ease infinite reverse;
+    }
   }
 }
 
+.link-inner {
+  background-color: $gold;
+  padding: 15px 25px;
+  border: 1px solid #0b1926;
+}
 
+@keyframes glitchy {
+  0% {
+    transform: translate(-2px, 2px);
+  }
+  25% {
+    transform: translate(-2px, -2px);
+  }
+  50% {
+    transform: translate(2px, 2px);
+  }
+  75% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(-2px, 2px);
+  }
+}
+
+@keyframes line-glitchy {
+  0% {
+    transform: translate(-1px, 1px);
+  }
+  25% {
+    transform: translate(-1px, -1px);
+  }
+  50% {
+    transform: translate(1px, 1px);
+  }
+  75% {
+    transform: translate(1px, -1px);
+  }
+  100% {
+    transform: translate(-1px, 1px);
+  }
+}
