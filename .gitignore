@@ -111,3 +111,5 @@ dist
 .tern-port
 /config/
 /.idea/
+/package-lock.json
+.DS_Store
