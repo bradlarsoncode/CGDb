@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./navbar.scss";
 import logoPath from "../../assets/bramcollegeclear.png";
+import "../landing/landing-page.scss";
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -25,13 +26,25 @@ class Navbar extends React.Component {
       );
     } else {
       return (
-
         <div>
           {/* <Link to={"/signup"}>Signup</Link>
           <Link to={"/login"}>Login</Link> */}
-          <button onClick={() => this.props.openModal('signup')}>Sign Up</button>
-          <button onClick={() => this.props.openModal('login')}>Log In</button>
-
+          <div className="btn-link">
+            <button
+              onClick={() => this.props.openModal("signup")}
+              className="link-inner"
+            >
+              Sign Up
+            </button>
+          </div>
+          <div className="btn-link">
+            <button
+              onClick={() => this.props.openModal("login")}
+              className="link-inner"
+            >
+              Log In
+            </button>
+          </div>
         </div>
       );
     }
@@ -40,10 +53,12 @@ class Navbar extends React.Component {
   render() {
     return (
       <nav className="navbar">
-        {/*<h1>CGDb</h1>*/}
         <div className="logo-assets">
           <img src={logoPath} alt="logo" />
-          <h1>BRAM COLLEGE</h1>
+          <h1 className="brand-text">
+            <span>W</span>elcome, <span>to</span> the <span>B</span>ram{" "}
+            <span>C</span>ollege
+          </h1>
         </div>
         {this.getLinks()}
       </nav>

@@ -1,6 +1,205 @@
+$blue: #0c213a;
+$gold: #b8995c;
+$red: #7e1b1b;
+.brand-text {
+  span {
+    color: $gold;
+  }
+  position: relative;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #000;
+  -webkit-text-stroke: 0.02em #fff;
+  text-shadow: 0.066em 0 0 $gold, -0.066em 0 0 $red;
+  animation: glitch-shadow 8s infinite linear, glitch-flicker 7s infinite linear;
+}
+
 .landing-container {
-  //background-image: url("https://media.giphy.com/media/MFabj1E9mgUsqwVWHu/giphy.gif");
-  //width: 100%;
-  //height: 100%;
-  //background-size: cover;
+  text-align: center;
+}
+
+@keyframes glitch-flicker {
+  0% {
+    color: $blue;
+    -webkit-text-stroke-color: #fff;
+  }
+
+  10% {
+    color: $blue;
+    -webkit-text-stroke-color: #fff;
+  }
+  10.1% {
+    color: transparent;
+    -webkit-text-stroke-color: transparent;
+  }
+  10.6% {
+    color: transparent;
+    -webkit-text-stroke-color: transparent;
+  }
+  10.7% {
+    color: $blue;
+    -webkit-text-stroke-color: #fff;
+  }
+
+  11% {
+    color: $blue;
+    -webkit-text-stroke-color: #fff;
+  }
+  11.1% {
+    color: transparent;
+    -webkit-text-stroke-color: transparent;
+  }
+  11.6% {
+    color: transparent;
+    -webkit-text-stroke-color: transparent;
+  }
+  11.7% {
+    color: $blue;
+    -webkit-text-stroke-color: #fff;
+  }
+
+  50% {
+    color: $blue;
+    -webkit-text-stroke-color: #fff;
+  }
+  50.1% {
+    color: transparent;
+    -webkit-text-stroke-color: transparent;
+  }
+  51.6% {
+    color: transparent;
+    -webkit-text-stroke-color: transparent;
+  }
+  51.7% {
+    color: $blue;
+    -webkit-text-stroke-color: #fff;
+  }
+
+  70% {
+    color: $blue;
+    -webkit-text-stroke-color: #fff;
+  }
+  70.1% {
+    color: #000;
+    -webkit-text-stroke-color: transparent;
+  }
+  70.6% {
+    color: #000;
+    -webkit-text-stroke-color: transparent;
+  }
+  70.7% {
+    color: #000;
+    -webkit-text-stroke-color: #fff;
+  }
+
+  73% {
+    color: #2fffe7;
+    -webkit-text-stroke-color: #fff;
+  }
+  73.1% {
+    color: transparent;
+    -webkit-text-stroke-color: transparent;
+  }
+  73.6% {
+    color: transparent;
+    -webkit-text-stroke-color: transparent;
+  }
+  73.7% {
+    color: #000;
+    -webkit-text-stroke-color: #fff;
+  }
+
+  100% {
+    color: #000;
+    -webkit-text-stroke-color: #fff;
+  }
+}
+
+@keyframes glitch-shadow {
+  0% {
+    text-shadow: 0.066em 0 0 $gold, -0.066em 0 0 $red;
+  }
+
+  3% {
+    text-shadow: 0.066em 0 0 $gold, -0.066em 0 0 $red;
+  }
+  3.1% {
+    text-shadow: 0 0 0 $gold, -0.066em 0 0 $red;
+  }
+  3.6% {
+    text-shadow: 0 0 0 $gold, -0.066em 0 0 $red;
+  }
+  3.7% {
+    text-shadow: 0.066em 0 0 $gold, -0.066em 0 0 $red;
+  }
+
+  6% {
+    text-shadow: 0.066em 0 0 $gold, -0.066em 0 0 $red;
+  }
+  6.1% {
+    text-shadow: 0 0 0 $gold, -0.066em 0 0 $red;
+  }
+  6.6% {
+    text-shadow: 0 0 0 $gold, -0.066em 0 0 $red;
+  }
+  6.7% {
+    text-shadow: 0.066em 0 0 $gold, -0.066em 0 0 $red;
+  }
+
+  16% {
+    text-shadow: 0.066em 0 0 $gold, -0.066em 0 0 $red;
+  }
+  16.1% {
+    text-shadow: 0 0 0 $gold, 0 0 0 $red;
+  }
+  16.6% {
+    text-shadow: 0 0 0 $gold, 0 0 0 $red;
+  }
+  16.7% {
+    text-shadow: 0.066em 0 0 $gold, -0.066em 0 0 $red;
+  }
+
+  50% {
+    text-shadow: 0.066em 0 0 $gold, -0.066em 0 0 $red;
+  }
+  50.1% {
+    text-shadow: 0.066em 0 0 $gold, 0 0 0 $red;
+  }
+  50.6% {
+    text-shadow: 0.066em 0 0 $gold, 0 0 0 $red;
+  }
+  50.7% {
+    text-shadow: 0.066em 0 0 $gold, -0.066em 0 0 $red;
+  }
+
+  62% {
+    text-shadow: 0.066em 0 0 $gold, -0.066em 0 0 $red;
+  }
+  62.1% {
+    text-shadow: 0 0 0 $gold, -0.066em 0 0 $red;
+  }
+  62.6% {
+    text-shadow: 0 0 0 $gold, -0.066em 0 0 $red;
+  }
+  62.7% {
+    text-shadow: 0.066em 0 0 $gold, -0.066em 0 0 $red;
+  }
+
+  63% {
+    text-shadow: 0.066em 0 0 $gold, -0.066em 0 0 $red;
+  }
+  63.1% {
+    text-shadow: 0 0 0 $gold, 0 0 0 $red;
+  }
+  63.6% {
+    text-shadow: 0 0 0 $gold, 0 0 0 $red;
+  }
+  63.7% {
+    text-shadow: 0.066em 0 0 $gold, -0.066em 0 0 $red;
+  }
+
+  100% {
+    text-shadow: 0.066em 0 0 $gold, -0.066em 0 0 $red;
+  }
 }
