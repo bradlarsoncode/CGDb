@@ -15,7 +15,7 @@ const App = () => (
   <div className="app">
     <BackgroundVideo />
     <NavBarContainer />
-
+    <Modal />
     <AuthRoute exact path="/" component={MainPage} />
     {/* <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} /> */}
