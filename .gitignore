@@ -2,6 +2,7 @@
 /config/keys.js
 /node_modules
 /.idea
+/package-lock.json
 
 
 
@@ -111,3 +112,4 @@ dist
 .tern-port
 /config/
 /.idea/
+.DS_Store
