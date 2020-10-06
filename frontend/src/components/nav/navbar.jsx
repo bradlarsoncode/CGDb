@@ -27,7 +27,7 @@ class Navbar extends React.Component {
           <div className="logo-assets">
             <img src={logoPath} alt="logo" />
             <h1 className="brand-text">
-              <span>Welcome</span> {this.props.currUser.email}
+              <span>Welcome</span> {this.props.currUser.name}
             </h1>
           </div>
           <div>
