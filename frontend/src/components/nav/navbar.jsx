@@ -56,8 +56,8 @@ class Navbar extends React.Component {
         <div className="logo-assets">
           <img src={logoPath} alt="logo" />
           <h1 className="brand-text">
-            <span>W</span>elcome, <span>to</span> the <span>B</span>ram{" "}
-            <span>C</span>ollege
+            <span>Welcome</span> to the <span>C</span>ognitive{" "}
+            <span>G</span>enetics <span>D</span>ata<span>b</span>ase
           </h1>
         </div>
         {this.getLinks()}
