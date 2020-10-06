@@ -15,15 +15,15 @@ const QuestionSchema = new Schema({
         type: String,
         required: true
     },
+    progress: {
+        type: Number,
+        required: true
+    },
     responses: {
         type: Array,
         required: true
     },    // should display what responses we can chose
-    question_type: {
-        type: String,
-        required: true
-    },
-    weirdness: {
+    ui_bank: {
         type: Number,
         required: true
     }
