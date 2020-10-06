@@ -19,48 +19,62 @@ class Navbar extends React.Component {
   getLinks() {
     if (this.props.loggedIn) {
       return (
-        <div>
-          <Link to={"/profile"}>Profile</Link>
-          <button onClick={this.logoutUser}>Logout</button>
-        </div>
+        <nav className="navbar">
+          <div className="logo-assets">
+            <img src={logoPath} alt="logo" />
+            <h1 className="brand-text">
+              <span>Welcome</span> {this.props.currUser.email}
+            </h1>
+          </div>
+          <div>
+            <div className="btn-link">
+              <Link to={"/profile"}>
+                <button className="link-inner">Profile</button>
+              </Link>
+            </div>
+            <div className="btn-link">
+              <button onClick={this.logoutUser} className="link-inner">
+                Logout
+              </button>
+            </div>
+          </div>
+        </nav>
       );
     } else {
       return (
-        <div>
-          <div className="btn-link">
-            <button
-              onClick={() => this.props.openModal("signup")}
-              className="link-inner"
-            >
-              Sign Up
-            </button>
+        <nav className="navbar">
+          <div className="logo-assets">
+            <img src={logoPath} alt="logo" />
+            <h1 className="brand-text">
+              <span>Welcome</span> to the <span>C</span>ognitive <span>G</span>
+              enetics <span>D</span>ata<span>b</span>ase
+            </h1>
           </div>
-          <div className="btn-link">
-            <button
-              onClick={() => this.props.openModal("login")}
-              className="link-inner"
-            >
-              Log In
-            </button>
+          <div>
+            <div className="btn-link">
+              <button
+                onClick={() => this.props.openModal("signup")}
+                className="link-inner"
+              >
+                Sign Up
+              </button>
+            </div>
+            <div className="btn-link">
+              <button
+                onClick={() => this.props.openModal("login")}
+                className="link-inner"
+              >
+                Log In
+              </button>
+            </div>
           </div>
-        </div>
+        </nav>
       );
     }
   }
 
   render() {
-    return (
-      <nav className="navbar">
-        <div className="logo-assets">
-          <img src={logoPath} alt="logo" />
-          <h1 className="brand-text">
-            <span>Welcome</span> to the <span>C</span>ognitive{" "}
-            <span>G</span>enetics <span>D</span>ata<span>b</span>ase
-          </h1>
-        </div>
-        {this.getLinks()}
-      </nav>
-    );
+    return this.getLinks();
   }
 }
 
