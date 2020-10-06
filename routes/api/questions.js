@@ -1,11 +1,9 @@
 const express = require("express");
 const router = express.Router();
-
-
-
-const mongoose = require('mongoose');
-
 const Question = require('../../models/Question');
+
+
+// const mongoose = require('mongoose');
 
 
 router.get('/:id', (req, res) => {

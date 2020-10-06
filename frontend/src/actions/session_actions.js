@@ -5,7 +5,6 @@ import jwt_decode from 'jwt-decode';
 export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
 export const RECEIVE_USER_LOGOUT = "RECEIVE_USER_LOGOUT";
-export const RECEIVE_USER_SIGN_IN = "RECEIVE_USER_SIGN_IN";
 
 //TODO: remove redundant RECEIVE_USER_SIGN_IN
 
@@ -14,10 +13,7 @@ export const receiveCurrentUser = currentUser => ({
     currentUser
 });
 
-export const receiveUserSignIn = () => ({
-    type: RECEIVE_USER_SIGN_IN
-});
-  
+
 export const receiveErrors = errors => ({
     type: RECEIVE_SESSION_ERRORS,
     errors
@@ -32,10 +28,7 @@ export const signup = user => dispatch => {
     return(
 
     APIUtil.signup(user).then((res) => {
-        return (
-        dispatch(receiveUserSignIn(),
-        dispatch(receiveCurrentUser(res.data))
-        )
+        return dispatch(receiveCurrentUser(res.data)
     )}, err => (
         dispatch(receiveErrors(err.response.data))
     ))
