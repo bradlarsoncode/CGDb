@@ -111,7 +111,7 @@ dist
 
 # TernJS port file
 .tern-port
-/config/
+
 /.idea/
 .DS_Store
 !/frontend/package-lock.json
