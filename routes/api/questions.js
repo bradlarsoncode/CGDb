@@ -2,40 +2,26 @@ const express = require("express");
 const router = express.Router();
 const Question = require('../../models/Question');
 
+router.get("/test", (req, res) => {
+    res.json({ msg: "This is the questions route" })
+});
 
-// const mongoose = require('mongoose');
 
 router.get('/all', (req, res) => {
     Question.find()
-    .then(question => res.json(question))
-    .catch(err =>
-        res.status(404).json({ notquestionfound: 'No good' })
-    );
-})
-
-
-router.get('/progress/:id', (req, res) => {
-    Question.find({progress: req.params.id})
-    .then(question => res.json(question))
-    .catch(err =>
-        res.status(404).json({ notquestionfound: 'No question found with that progress Id' })
+        .then(questions => res.json(questions))
+        .catch(err =>
+            res.status(404).json({ notquestionfound: 'No question found' })
         );
-        
-    });
-    
-    
-    // router.get('/initial')
-    
-    // router.get('/:id', (req, res) => {
-    //     // Question.find({ progress: id})
-    //     //     .then(question => res.json(question))
-    //     //     .catch(err =>
-    //     //         res.status(404).json({ notquestionfound: 'No question found with that ID' })
-    //     //     );
-    //     Question.find()
-    //     .then(question => res.json(question))
-    //     .catch(err =>
-    //         res.status(404).json({ notquestionfound: 'No good' })
-    //     );
-    // });
+});
+
+router.get('/progress/:progress', (req, res) => {
+    Question.find({progress: req.params.progress})
+        .then(questions => res.json(questions))
+        .catch(err =>
+            res.status(404).json({ notquestionfound: 'No question found with that progress' })
+        );
+});
+
+
 module.exports = router;
