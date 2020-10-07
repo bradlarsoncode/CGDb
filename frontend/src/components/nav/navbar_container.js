@@ -16,7 +16,7 @@ const mDTP = (dispatch) => ({
     dispatch(setAlert(true, "success", "You have successfully logged out!")),
   alertLogin: (name) =>
     dispatch(
-      setAlert(true, "success", `You have successfully logged in! ${name}`)
+      setAlert(true, "success", `You have successfully logged in ${name}!`)
     ),
 });
 
