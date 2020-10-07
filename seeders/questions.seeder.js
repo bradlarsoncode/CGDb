@@ -18,7 +18,9 @@ const data = [
   progress: 0,
     responses: [
       { text: "Get better", pv: 0 },
+
       { text: "Blame my mother for my problems", pv: -1, media: "https://webfilms-films.s3.amazonaws.com/sounds/scream.wav"},   // TODO normalize media src, change scream to something else
+
       { text: "Learn to fly", pv: -1 }
     ],
       ui_bank: 1
@@ -96,6 +98,7 @@ const data = [
   //   ],
   //   ui_bank: 6  // TODO random buttons that will multiply whenever it is clicked.
   // }
+
 
 
 ]
