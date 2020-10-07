@@ -13,6 +13,14 @@ const UserSchema = new Schema({
     password: {
         type: String,
         required: true
+    },
+    ftp: {
+        type: Boolean,
+        required: true
+    },
+    sanity: {
+        type: Number,
+        required: true
     }
 }, {
     timestamps: true
