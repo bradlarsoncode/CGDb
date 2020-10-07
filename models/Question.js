@@ -30,5 +30,5 @@ const QuestionSchema = new Schema({
 
 });
 
-const Question = mongoose.model('Question', QuestionSchema);
-module.exports = Question;
+
+module.exports = Question = mongoose.model('Question', QuestionSchema);

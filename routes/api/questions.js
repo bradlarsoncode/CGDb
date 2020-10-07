@@ -6,6 +6,7 @@ router.get("/test", (req, res) => {
     res.json({ msg: "This is the questions route" })
 });
 
+
 router.get('/all', (req, res) => {
     Question.find()
         .then(questions => res.json(questions))
@@ -21,5 +22,6 @@ router.get('/progress/:progress', (req, res) => {
             res.status(404).json({ notquestionfound: 'No question found with that progress' })
         );
 });
+
 
 module.exports = router;
