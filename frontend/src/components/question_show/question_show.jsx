@@ -2,6 +2,17 @@ import React from 'react';
 
 export default class QuestionShow extends React.Component {
 
+    constructor (props) {
+        super(props)
+        this.state = {
+            gpv: {},
+            ready: false
+        }
+    }
+
+    handleSubmit () {
+       
+    }
     componentWillMount () {
         // this.props.requestQuestions()
         
@@ -10,8 +21,16 @@ export default class QuestionShow extends React.Component {
 
     handleResponse () {
         return e => {
-            e.preventDefault()
-            console.log(e.target.value) 
+
+            let newEntry = {[e.target.name]: parseInt(e.target.value)}
+            let ngpv = {
+                ...this.state.gpv,
+                ...newEntry
+            }
+            
+            this.setState({gpv: ngpv})
+            console.log( Object.values(ngpv).reduce((a,b) => a + b))
+            
         }
 
     }
@@ -21,14 +40,14 @@ export default class QuestionShow extends React.Component {
         switch (currentQuestion) {
             case 0:
                 
-                message = 'Please begin with the following initial questions:';
+                message = 'Thank you for your interest in our program. Please begin with the following initial questions:';
         
             default:
                 break;
         }
         return (
             
-        <div>
+        <div className='q-form'>
         <h3>{message}</h3>
         { this.props.questions ?  (this.props.questions.map((question, i) => {
             return (
@@ -39,6 +58,7 @@ export default class QuestionShow extends React.Component {
                             <label>
 
                             <input
+                            onClick={this.handleResponse()}
                             type='radio'
                             value={r.pv}
                             name={`radAnswer-${i}`}
