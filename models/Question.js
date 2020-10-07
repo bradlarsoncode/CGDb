@@ -31,4 +31,4 @@ const QuestionSchema = new Schema({
 });
 
 const Question = mongoose.model('Question', QuestionSchema);
-export default Question;
+module.exports = Question;
