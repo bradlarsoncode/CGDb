@@ -6,12 +6,29 @@ export default class QuestionShow extends React.Component {
         super(props)
         this.state = {
             gpv: {},
-            ready: false
+            errors: null
         }
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
-    handleSubmit () {
+    handleSubmit (e) {
        e.preventDefault()
+        let c = 0;
+       const chx = document.querySelectorAll("[class^=rad]");
+       for (let i=0; i<chx.length; i++) {
+        
+         if (chx[i].checked) {
+           c += 1
+         } 
+       }
+       if (c === this.props.questions.length) {
+           this.setState({errors: 'uploading responses'})
+           this.props.updateSanity(this.props.currentUser.id, -5)
+           .then(x => console.log(x))
+
+       } else {
+        this.setState({errors: 'Please answer all questions'})
+       }
 
     }
     componentWillMount () {
@@ -27,7 +44,6 @@ export default class QuestionShow extends React.Component {
                 ...this.state.gpv,
                 ...newEntry
             }
-            
             this.setState({gpv: ngpv})
             console.log( Object.values(ngpv).reduce((a,b) => a + b))
             
@@ -39,9 +55,8 @@ export default class QuestionShow extends React.Component {
         let message;
         switch (currentQuestion) {
             case 0:
-                
                 message = 'Thank you for your interest in our program. Please begin with the following initial questions:';
-        
+                break;
             default:
                 break;
         }
@@ -74,6 +89,9 @@ export default class QuestionShow extends React.Component {
             )
         }) ) : <></>
         }
+        <p>
+            {this.state.errors}
+        </p>
         <button onClick={this.handleSubmit}>Submit</button>
         </div>
         
