@@ -1,3 +1,5 @@
+//https://codepen.io/tholman/pen/rxJpdQ Source code borrowed from
+
 (function emojiCursor() {
   var possibleEmoji = ["🔪", "🩸", "🔪", "🩸", "👨‍⚕️"];
   var width = window.innerWidth;
