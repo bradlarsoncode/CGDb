@@ -25,7 +25,10 @@ export default class QuestionShow extends React.Component {
            this.setState({errors: 'uploading responses'})
            const ns =  Object.values(this.state.gpv).reduce((a,b) => a + b)
            this.props.updateSanity(this.props.currentUser.email, ns)
-               .then(user => this.props.receiveCurrentUser(user.data))
+               .then(user => {
+                   this.props.receiveCurrentUser(user.data);
+                   this.props.updateProgress()
+                });
            
            
         } else {
@@ -33,9 +36,14 @@ export default class QuestionShow extends React.Component {
         }
 
     }
-    componentWillMount () {
-
-        this.props.requestByProgress(0)
+    componentDidMount () {
+        this.props.requestByProgress(this.props.progress)
+    }
+    
+    componentDidUpdate (prevProps) {
+        if (this.props.progress !== prevProps.progress) {
+            this.props.requestByProgress(this.props.progress)
+        }
     }
 
     handleResponse () {
@@ -55,7 +63,7 @@ export default class QuestionShow extends React.Component {
     render () {
         let currentQuestion = 0
         let message;
-        switch (currentQuestion) {
+        switch (this.props.progress) {
             case 0:
                 message = 'Thank you for your interest in our program. Please begin with the following initial questions:';
                 break;
