@@ -11,11 +11,11 @@ export default class QuestionShow extends React.Component {
     }
 
     handleSubmit () {
-       
+       e.preventDefault()
+
     }
     componentWillMount () {
-        // this.props.requestQuestions()
-        
+
         this.props.requestByProgress(0)
     }
 
@@ -51,7 +51,7 @@ export default class QuestionShow extends React.Component {
         <h3>{message}</h3>
         { this.props.questions ?  (this.props.questions.map((question, i) => {
             return (
-                <div>
+                <li>
                     <p>{question.prompt}</p>
                     {question.responses.map((r) => {
                         return (
@@ -61,6 +61,7 @@ export default class QuestionShow extends React.Component {
                             onClick={this.handleResponse()}
                             type='radio'
                             value={r.pv}
+                            className={`radAnswer-${i}`}
                             name={`radAnswer-${i}`}
                             ></input>
                             {r.text}
@@ -68,12 +69,12 @@ export default class QuestionShow extends React.Component {
                             </label>
                         )
                     })}
-                </div>
+
+                </li>
             )
         }) ) : <></>
-    
-    
         }
+        <button onClick={this.handleSubmit}>Submit</button>
         </div>
         
         )
