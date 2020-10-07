@@ -7,6 +7,7 @@ import DarkPage from "./dark-page/dark-page";
 import MainPage from "./landing/landing-page";
 import "../App.scss";
 import BackgroundVideo from "./landing/background-video";
+import Home from './home/home_container';
 
 import Modal from "./modal/modal";
 
@@ -17,9 +18,13 @@ const App = () => (
     <Modal />
     <AuthRoute exact path="/" component={MainPage} />
     <Route exact path="/darkpage" component={DarkPage} />
-    {/*/!* <AuthRoute exact path="/login" component={LoginFormContainer} />*/}
-    {/* <ProtectedRoute path="/" component={Home} /> */}
-    {/* <ProtectedRoute path="/" component={Home} /> */}
+
+    <ProtectedRoute exact path="/home" component={Home} />
+    {/* <AuthRoute exact path="/login" component={LoginFormContainer} />
+        <AuthRoute exact path="/signup" component={SignupFormContainer} /> */}
+    
+        {/* <ProtectedRoute path="/" component={Home} /> */}
+
   </div>
 );
 

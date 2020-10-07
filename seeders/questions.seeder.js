@@ -11,43 +11,37 @@ const data = [
       {text: "Not real", pv: -1}
     ],
     ui_bank: 0
-},
-
-{
-  prompt: "I'm here to:",
-  progress: 0,
+  },
+  {
+    prompt: "I'm here to:",
+    progress: 0,
     responses: [
       { text: "Get better", pv: 0 },
-
       { text: "Blame my mother for my problems", pv: -1, media: "https://webfilms-films.s3.amazonaws.com/sounds/scream.wav"},   // TODO normalize media src, change scream to something else
-
       { text: "Learn to fly", pv: -1 }
     ],
       ui_bank: 1
-},
-
-{
-  prompt: "The previous question was:",
-  progress: 0,
+  },
+  {
+    prompt: "The previous question was:",
+    progress: 0,
     responses: [
       { text: "Invasive", pv: -1 },
       { text: "Infuriating", pv: -1 },
       { text: "Thought-provoking", pv: 0 }
     ],
       ui_bank: 0
-},
-
-{
-  prompt: "Honesty is:",
-  progress: 0,
+  },
+  {
+    prompt: "Honesty is:",
+    progress: 0,
     responses: [
       { text: "Overrated", pv: -1 },
       { text: "A privilege to be awarded to those who prove themselves trustworthy", pv: -1 },
       { text: "A virtue that can be tarnished/lost", pv: 0 }
     ],
     ui_bank: 0
-},
-
+  },
   {
     prompt: "“How are you feeling today?:",
     progress: 1,
@@ -81,24 +75,42 @@ const data = [
       { image: "", subImage: "", pv: 0 }
     ],
     ui_bank: 4  // TODO creepy voices media should loop continuously: "https://webfilms-films.s3.amazonaws.com/sounds/weird+voice.wav"
-  }
-  // {
-  //   prompt: "Select whether this is good or bad:",
-  //   progress: 1,
-  //   responses: [
-  //     { images: [] },
-  //   ],
-  //   ui_bank: 5  //TODO like the Harvard implicit survey, select if image is good or bad
-  // }
-  // {
-  //   prompt: "Select the correct button",
-  //   progress: 1,
-  //   responses: [
-  //     {pv: -1}
-  //   ],
-  //   ui_bank: 6  // TODO random buttons that will multiply whenever it is clicked.
-  // }
-
+  },
+  {
+    prompt: "Select whether this is good or bad:",
+    progress: 1,
+    responses: [
+      { images: [] },
+    ],
+    ui_bank: 5  //TODO like the Harvard implicit survey, select if image is good or bad
+  },
+  {
+    prompt: "Select the correct button",
+    progress: 1,
+    responses: [
+      {pv: -1}
+    ],
+    ui_bank: 6  // TODO random buttons that will multiply whenever it is clicked.  After buttons are pressed 10 times, progress to next page.
+  },
+  {
+    prompt: "Are you seeing things that other people cant see?:",
+    progress: 1,
+    responses: [
+      { images: [] },
+      { text: "Yes", pv: -1 },
+      { text: "No", pv: 0 }
+    ],
+    ui_bank: 7  //TODO montage of images are shown in modal
+  },
+  {
+    prompt: "Darkness reveals the truth",
+    progress: 1,
+    responses: [
+      { media: "" }
+    ],
+    ui_bank: 8  //TODO when user hits the switch/lightbulb, background goes dark and user gets an audio or video jump scare
+  },
+  
 
 
 ]

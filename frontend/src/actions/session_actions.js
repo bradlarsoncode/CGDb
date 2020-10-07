@@ -24,14 +24,15 @@ export const logoutUser = () => ({
 });
 
 export const signup = user => dispatch => {
-  
+  debugger
     return(
 
     APIUtil.signup(user).then((res) => {
         return dispatch(receiveCurrentUser(res.data)
-    )}, err => (
-        dispatch(receiveErrors(err.response.data))
-    ))
+    )}, err => {
+        debugger
+        return dispatch(receiveErrors(err.response.data))
+    })
 )};
 
 export const login = user => dispatch => (
