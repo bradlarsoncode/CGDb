@@ -14,13 +14,11 @@ case RECEIVE_CURRENT_USER:
    ...state,
    isAuthenticated: !!action.currentUser,
    user: action.currentUser,
-   progress: 0
  };
 case RECEIVE_USER_LOGOUT:
  return {
    isAuthenticated: false,
    user: undefined,
-   progress: 0
  };
 case UPDATE_PROGRESS:
   return Object.assign({}, state, {progress: state.progress+1})
