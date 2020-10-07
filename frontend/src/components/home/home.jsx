@@ -8,8 +8,6 @@ export default class Home extends React.Component {
 
         return (
             <div className='home-container'>
-
-                <h1>Thank you for your interest in our program.</h1>
                 <QuestionShow />
             </div>
         )
