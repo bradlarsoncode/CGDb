@@ -18,10 +18,15 @@ class Navbar extends React.Component {
     this.props.alertLogout();
     this.props.logout();
   }
+  
+  componentDidUpdate (prevProps) {
+    if (prevProps.loggedIn !== this.props.loggedIn && this.props.loggedIn) {
+      this.props.alertLogin(this.props.currUser.name);
+    } 
+  }
 
   getLinks() {
     if (this.props.loggedIn) {
-      this.props.alertLogin(this.props.currUser.name);
       return (
         <nav className="navbar">
           <div className="logo-assets">
