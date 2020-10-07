@@ -27,18 +27,31 @@ res.json({
 });
 })
 
-router.patch('/:id', (req, res) => {
-    User.findOne({id: req.params.id })
-        .then(user => {
-            user.sanity = user.sanity + req.body.sanity;
-            user.save
-            res.json(user)
-        }
-        )
-})
+// router.patch('/:id', (req, res) => {
+//     User.findOne({id: req.params.id })
+//         .then(user => {
+//             user.sanity = user.sanity + req.body.sanity;
+//             user.save
+//             res.json(user)
+//         }
+//         )
+// })
 
-
+router.patch('/', (req, res) => {
+    const email = req.body.email;
+    const saneChange = req.body.sanity;
     
+    User.findOne({email})
+      .then(user => {
+        if (!user) {
+          return res.status(408).json({email: 'This user does not exist'});
+        }
+        user.sanity = user.sanity + saneChange;
+        user.save()
+        res.json(user)
+        
+      })
+  })
 
 router.post('/register', (req, res) => {
     const { errors, isValid } = validateRegisterInput(req.body);

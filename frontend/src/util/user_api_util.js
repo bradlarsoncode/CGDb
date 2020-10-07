@@ -1,7 +1,7 @@
 
 import axios from 'axios';
 
-export const updateSanity = (id, sanity) => {
-    return axios.patch(`/api/users/${id}`, sanity);
+export const updateSanity = (email, sanity) => {
+    return axios.patch('/api/users/', {email, sanity});
   };
 

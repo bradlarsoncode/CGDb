@@ -1,6 +1,5 @@
 
 import React from 'react';
-
 export default class QuestionShow extends React.Component {
 
     constructor (props) {
@@ -24,12 +23,14 @@ export default class QuestionShow extends React.Component {
        }
        if (c === this.props.questions.length) {
            this.setState({errors: 'uploading responses'})
-           this.props.updateSanity(this.props.currentUser.id, -5)
-           .then(x => console.log(x))
-
-       } else {
-        this.setState({errors: 'Please answer all questions'})
-       }
+           const ns =  Object.values(this.state.gpv).reduce((a,b) => a + b)
+           this.props.updateSanity(this.props.currentUser.email, ns)
+               .then(user => this.props.receiveCurrentUser(user.data))
+           
+           
+        } else {
+            this.setState({errors: 'Please answer all questions'})
+        }
 
     }
     componentWillMount () {
@@ -46,7 +47,7 @@ export default class QuestionShow extends React.Component {
                 ...newEntry
             }
             this.setState({gpv: ngpv})
-            console.log( Object.values(ngpv).reduce((a,b) => a + b))
+           
             
         }
 
