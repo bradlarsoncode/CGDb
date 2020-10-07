@@ -22,13 +22,25 @@ router.get('/current', passport.authenticate('jwt', {session: false}), (req, res
 res.json({
     id: req.user.id,
     name: req.user.name,
-    email: req.user.email
+    email: req.user.email,
+
 });
 })
 
+router.patch('/:id', (req, res) => {
+    User.findOne({id: req.params.id })
+        .then(user => {
+            user.sanity = user.sanity + req.body.sanity;
+            user.save
+            res.json(user)
+        }
+        )
+})
+
+
+    
 
 router.post('/register', (req, res) => {
-    
     const { errors, isValid } = validateRegisterInput(req.body);
   
     if (!isValid) {
@@ -77,7 +89,9 @@ router.post('/login', (req, res) => {
                         const payload = {
                             id: user.id,
                             name: user.name,
-                            email: user.email
+                            email: user.email,
+                            ftp: user.ftp,
+                            sanity: user.sanity
                         }
                         jwt.sign(
                             payload,
