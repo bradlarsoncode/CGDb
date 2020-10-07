@@ -7,18 +7,20 @@ user: {},
 progress: 0
 };
 
+
 export default function(state = initialState, action) {
 switch (action.type) {
 case RECEIVE_CURRENT_USER:
  return {
    ...state,
    isAuthenticated: !!action.currentUser,
-   user: action.currentUser,
+   user: action.currentUser
  };
 case RECEIVE_USER_LOGOUT:
  return {
    isAuthenticated: false,
    user: undefined,
+   progress: 0
  };
 case UPDATE_PROGRESS:
   return Object.assign({}, state, {progress: state.progress+1})

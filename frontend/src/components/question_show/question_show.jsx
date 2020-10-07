@@ -1,5 +1,6 @@
 
 import React from 'react';
+import './question_show.scss'
 export default class QuestionShow extends React.Component {
 
     constructor (props) {
@@ -8,21 +9,22 @@ export default class QuestionShow extends React.Component {
             gpv: {},
             errors: null
         }
+        this.ref = React.createRef(); 
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     handleSubmit (e) {
+        debugger
        e.preventDefault()
         let c = 0;
        const chx = document.querySelectorAll("[class^=rad]");
        for (let i=0; i<chx.length; i++) {
-        
-         if (chx[i].checked) {
+        if (chx[i].checked) {
            c += 1
          } 
        }
        if (c === this.props.questions.length) {
-           this.setState({errors: 'uploading responses'})
+           this.setState({errors: ''})
            const ns =  Object.values(this.state.gpv).reduce((a,b) => a + b)
            this.props.updateSanity(this.props.currentUser.email, ns)
                .then(user => {
@@ -61,7 +63,6 @@ export default class QuestionShow extends React.Component {
 
     }
     render () {
-        let currentQuestion = 0
         let message;
         switch (this.props.progress) {
             case 0:
@@ -70,10 +71,26 @@ export default class QuestionShow extends React.Component {
             default:
                 break;
         }
+        let ui = (<></>);
+        if (this.props.questions)
+        switch (this.props.questions[0].ui_bank) {
+            case 4:
+                ui = (
+                    <audio controls
+                    ref={(input) => {this.reff = input}}
+                    src={this.props.questions[0].responses[0]}></audio>
+                )
+                break;
+        
+            default:
+                break;
+        }
+
         return (
             
         <div className='q-form'>
         <h3>{message}</h3>
+        {ui}
         { this.props.questions ?  (this.props.questions.map((question, i) => {
             return (
                 <li>
@@ -81,7 +98,6 @@ export default class QuestionShow extends React.Component {
                     {question.responses.map((r) => {
                         return (
                             <label>
-
                             <input
                             onClick={this.handleResponse()}
                             type='radio'
@@ -94,7 +110,6 @@ export default class QuestionShow extends React.Component {
                             </label>
                         )
                     })}
-
                 </li>
             )
         }) ) : <></>
