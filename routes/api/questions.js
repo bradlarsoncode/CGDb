@@ -5,31 +5,37 @@ const Question = require('../../models/Question');
 
 // const mongoose = require('mongoose');
 
+router.get('/all', (req, res) => {
+    Question.find()
+    .then(question => res.json(question))
+    .catch(err =>
+        res.status(404).json({ notquestionfound: 'No good' })
+    );
+})
 
-router.get('/:id', (req, res) => {
-    Question.findById(req.params.id)
-        .then(question => res.json(question))
-        .catch(err =>
-            res.status(404).json({ notquestionfound: 'No question found with that ID' })
+
+router.get('/progress/:id', (req, res) => {
+    Question.find({progress: req.params.id})
+    .then(question => res.json(question))
+    .catch(err =>
+        res.status(404).json({ notquestionfound: 'No question found with that progress Id' })
         );
-});
-
-router.get('/:weirdness', (req, res) => {
-    Question.find({question: req.params.weirdness})
-        .then(question => res.json(question))
-        .catch(err =>
-            res.status(404).json({ notquestionfound: 'No question found with that ID' })
-        );
-});
-
-// router.get('/question/:question_id', (req, res) => {
-//     Question.find({ question: req.params.question_id })
-//         .then(questions => res.json(questions))
-//         .catch(err =>
-//             res.status(404).json({ noquestionfound: 'Question does not exist' }
-//             )
-//         );
-// });
-
-
+        
+    });
+    
+    
+    // router.get('/initial')
+    
+    // router.get('/:id', (req, res) => {
+    //     // Question.find({ progress: id})
+    //     //     .then(question => res.json(question))
+    //     //     .catch(err =>
+    //     //         res.status(404).json({ notquestionfound: 'No question found with that ID' })
+    //     //     );
+    //     Question.find()
+    //     .then(question => res.json(question))
+    //     .catch(err =>
+    //         res.status(404).json({ notquestionfound: 'No good' })
+    //     );
+    // });
 module.exports = router;

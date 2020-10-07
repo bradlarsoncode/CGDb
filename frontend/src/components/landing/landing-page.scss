@@ -16,7 +16,16 @@ $red: #7e1b1b;
 }
 
 .landing-container {
-  text-align: center;
+  
+  position: absolute;
+  left: 5%;
+  top: 170px;
+  width: 1600px;
+  background-color: rgba($color: $blue, $alpha: 0.7);
+  font-size: x-large;
+  display: flex;
+  flex-direction: column;
+  
 }
 
 @keyframes glitch-flicker {

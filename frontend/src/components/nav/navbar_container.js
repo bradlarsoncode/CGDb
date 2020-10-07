@@ -21,3 +21,4 @@ const mDTP = (dispatch) => ({
 });
 
 export default connect(mapStateToProps, mDTP)(Navbar);
+  

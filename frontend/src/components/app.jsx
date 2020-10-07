@@ -6,6 +6,7 @@ import NavBarContainer from "./nav/navbar_container";
 import MainPage from "./landing/landing-page";
 import "../App.scss";
 import BackgroundVideo from "./landing/background-video";
+import Home from './home/home_container';
 
 import Modal from "./modal/modal";
 
@@ -15,6 +16,7 @@ const App = () => (
     <NavBarContainer />
     <Modal />
     <AuthRoute exact path="/" component={MainPage} />
+    <ProtectedRoute exact path="/home" component={Home} />
     {/* <AuthRoute exact path="/login" component={LoginFormContainer} />
         <AuthRoute exact path="/signup" component={SignupFormContainer} /> */}
     
