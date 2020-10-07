@@ -1,0 +1,32 @@
+.test-container {
+  background: url(https://i.pinimg.com/originals/fd/29/7c/fd297c2e1ddd5f9126ded2ca99b7f5fd.jpg)
+    no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  cursor: none;
+}
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: calc(20px + 2vw);
+  font-weight: 700;
+  color: #fafafa;
+  text-shadow: 2px 2px 2px #000;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+.spotlight {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: radial-gradient(
+    circle,
+    transparent 160px,
+    rgba(0, 0, 0, 0.85) 200px
+  );
+}
