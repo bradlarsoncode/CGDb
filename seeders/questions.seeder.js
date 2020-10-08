@@ -57,17 +57,17 @@ const data = [
     progress: 1,
     responses: [
 
-      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
-      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
-      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
-      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
-      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
-      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
-      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
-      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
-      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
-      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
-      { text: "Awful", pv: -1 }   // TODO create function to make all selections become "Awful"
+      { text: "Awful", pv: -1 },   
+      { text: "Awful", pv: -1 },   
+      { text: "Awful", pv: -1 },   
+      { text: "Awful", pv: -1 },   
+      { text: "Awful", pv: -1 },   
+      { text: "Awful", pv: -1 },   
+      { text: "Awful", pv: -1 },  
+      { text: "Awful", pv: -1 },   
+      { text: "Awful", pv: -1 },   
+      { text: "Awful", pv: -1 },
+      { text: "Awful", pv: -1 }
     ],
     ui_bank: 2
   },

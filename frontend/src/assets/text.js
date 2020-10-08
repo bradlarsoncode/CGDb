@@ -3,7 +3,7 @@ import React from 'react';
     //Can we add an effect where the 
 
 export const shadow = () => {
-    return(
+    return (
         <div className="fade-in">
             <p>"A long black shadow slid across the pavement near their feet.
             They were barely in time to see the huge gray form of the carnivore 
@@ -17,7 +17,7 @@ export const shadow = () => {
 
 export const steps = () => {
     return (
-      <div>
+      <div className="fade-in">
         <p>"She had been told time and time again that the most important steps were
         the first and the last. Murder. It was something that she carried within
         her in everything she did, but then he showed up and disrupted
@@ -31,7 +31,7 @@ export const steps = () => {
 
 export const stare = () => {
   return (
-    <div>
+    <div className="fade-in">
       <p>
         "He had done everything right. There had been no mistakes throughout the
         entire process. It had been perfection and he knew it without a doubt,
@@ -44,7 +44,7 @@ export const stare = () => {
 
 export const balloon = () => {
   return (
-    <div>
+    <div className="fade-in">
       <p>
         "Balloons are pretty and come in different colors, different shapes,
         different sizes, and they can even adjust sizes as needed. But don't
@@ -57,7 +57,7 @@ export const balloon = () => {
 
 export const pennies = () => {
   return (
-    <div>
+    <div className="fade-in">
       <p>
         "One dollar and eighty-seven cents. That was all. And sixty cents of it
         was in pennies. Pennies saved one and two at a time. Swallowed, one and
@@ -69,7 +69,7 @@ export const pennies = () => {
 
 export const amps = () => {
   return (
-    <div>
+    <div className="fade-in">
       <p>
         "It only takes .1 Amps to stop a human heart, once you go higher than .2
         Amps you start to cook the person from the inside. "
