@@ -1,4 +1,4 @@
-
+import './question_show.scss'
 import React from 'react';
 export default class QuestionShow extends React.Component {
 
