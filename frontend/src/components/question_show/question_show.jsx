@@ -36,9 +36,9 @@ export default class QuestionShow extends React.Component {
         } else {
             this.setState({errors: 'Please answer all questions'})
         }
-      
+    }
 
-    componentDidMount () {
+    componentDidMount (){
         if (this.props.progress) {
 
             this.props.requestByProgress(this.props.progress)
@@ -55,7 +55,7 @@ export default class QuestionShow extends React.Component {
         }
 
     }
-  }
+  
 
   handleResponse() {
     return (e) => {
