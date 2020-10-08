@@ -1,11 +1,14 @@
 import {connect} from 'react-redux';
 import Home from './home';
+import { resetSanity } from '../../util/user_api_util'
 
 const mSTP = state => ({
     currentUser: state.session.user
 });
 
-// const mDTP;
+const mDTP = dispatch => ({
+    resetSanity: (id) => resetSanity(id)
+})
 
 
-export default connect(mSTP, null)(Home)
+export default connect(mSTP, mDTP)(Home)

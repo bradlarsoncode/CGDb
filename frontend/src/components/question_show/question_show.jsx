@@ -88,6 +88,7 @@ export default class QuestionShow extends React.Component {
           break;
       }
     return (
+      
       <div className="question-part">
         {questionPart[this.props.progress]}
         <div className="q-form q-form-container">
@@ -121,7 +122,8 @@ export default class QuestionShow extends React.Component {
           ) : (
             <></>
           )}
-          <p>{this.state.errors}</p>
+          <p>{this.state.errors}</p
+
 
           <button onClick={this.handleSubmit}>Submit</button>
         </div>
