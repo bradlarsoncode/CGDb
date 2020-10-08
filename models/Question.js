@@ -31,8 +31,8 @@ const QuestionSchema = new Schema({
 });
 
 
-module.exports = Question = mongoose.model('Question', QuestionSchema);
+// module.exports = Question = mongoose.model('Question', QuestionSchema);
 
 // TODO undable to import Question from seedfile unless export setup like below:
-// const Question = mongoose.model('Question', QuestionSchema);
-// module.exports = Question;
+const Question = mongoose.model('Question', QuestionSchema);
+module.exports = Question;

@@ -89,38 +89,6 @@ export default class QuestionShow extends React.Component {
           break;
       }
     return (
-<<<<<<< HEAD
-      <div className="q-form q-form-container">
-        <h3>{message}</h3>
-        {ui}
-        {this.props.questions ? (
-          this.props.questions.map((question, i) => {
-            return (
-              <li key={i}>
-                <p>{question.prompt}</p>
-                {question.responses.map((r, i2) => {
-                  return (
-                    <label key={i2}>
-                      <input
-                        onClick={this.handleResponse()}
-                        type="radio"
-                        value={r.pv}
-                        className={`radAnswer-${i}`}
-                        name={`radAnswer-${i}`}
-                      ></input>
-                      {r.text}
-                      <br />
-                    </label>
-                  );
-                })}
-              </li>
-            );
-          })
-        ) : (
-          <></>
-        )}
-        <p>{this.state.errors}</p>
-=======
       <div className="question-part">
 
         {questionPart[this.props.progress]}
@@ -160,7 +128,6 @@ export default class QuestionShow extends React.Component {
           <p>{this.state.errors}</p>
 
           <button onClick={this.handleSubmit}>Submit</button>
->>>>>>> main
 
         </div>
       </div>
