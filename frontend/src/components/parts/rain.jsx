@@ -15,7 +15,7 @@ const Rain = (props) => {
       hrElement.style.animationDuration = 0.2 + Math.random() * 0.3 + "s";
       hrElement.style.animationDelay = Math.random() * 5 + "s";
     }
-    homeContainer.appendChild(hrElement);
+    if (homeContainer) homeContainer.appendChild(hrElement);
   }
 
   return null;
