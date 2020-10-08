@@ -5,6 +5,7 @@ export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
 export const RECEIVE_USER_LOGOUT = "RECEIVE_USER_LOGOUT";
 export const UPDATE_PROGRESS = "UPDATE_PROGRESS";
+export const RESET_PROGRESS = "RESET_PROGRESS";
 
 //TODO: remove redundant RECEIVE_USER_SIGN_IN
 
@@ -24,6 +25,10 @@ export const logoutUser = () => ({
 
 export const updateProgress = () => ({
   type: UPDATE_PROGRESS
+})
+
+export const resetProgress = () => ({
+  type: RESET_PROGRESS
 })
 
 export const signup = (user) => (dispatch) => {
