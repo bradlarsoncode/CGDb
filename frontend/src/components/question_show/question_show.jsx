@@ -1,14 +1,7 @@
-<<<<<<< HEAD
 
-
-import React from 'react';
-import './question_show.scss'
-import './question_show.scss'
-=======
 import React from "react";
 import questionPart from "./questionsParts";
 import "./question_show.scss";
->>>>>>> 409cac79a74416b7db73dab3f39abfd94585367a
 export default class QuestionShow extends React.Component {
   constructor(props) {
     super(props);
@@ -98,7 +91,7 @@ export default class QuestionShow extends React.Component {
     return (
       
       <div className="question-part">
-        {questionPart[this.props.progress]}
+        {/* {questionPart[this.props.progress]} */}
         <div className="q-form q-form-container">
           <h3>{message}</h3>
           {ui}
@@ -130,10 +123,9 @@ export default class QuestionShow extends React.Component {
           ) : (
             <></>
           )}
-          <p>{this.state.errors}</p
-
-
-          <button onClick={this.handleSubmit}>Submit</button>
+          <p>{this.state.errors}</p>
+        
+          <button onClick={this.handleSubmit}> Submit </button>
         </div>
       </div>
     );
