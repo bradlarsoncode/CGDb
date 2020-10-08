@@ -7,28 +7,25 @@ class InterruptText extends React.Component {
         let scaryText
         switch (this.props.progress) {
             case 1:
-                scaryText = Text.shadow();
+                scaryText = Text.stare();
                 break;
             case 2:
-                scaryText = Text.steps();
+                scaryText = Text.amps();
                 break;
             case 3:
-                scaryText = Text.stare();
+                scaryText = Text.pennies();
                 break;
             case 4:
                 scaryText = Text.balloon();
                 break;
             case 5:
-                scaryText = Text.pennies();
-                break;
-            case 6:
-                scaryText = Text.amps();
+                scaryText = Text.shadow();
                 break;
             default:
         }
         // console.log(this.props.progress)
         return (
-            <div className='interrupt-text'>
+            <div className='interrupt-text-container'>
                 {scaryText}
             </div>
         )
