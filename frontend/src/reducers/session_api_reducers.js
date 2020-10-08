@@ -1,5 +1,5 @@
 
-import { RECEIVE_CURRENT_USER, RECEIVE_USER_LOGOUT, UPDATE_PROGRESS } from '../actions/session_actions';
+import { RECEIVE_CURRENT_USER, RECEIVE_USER_LOGOUT, UPDATE_PROGRESS, RESET_PROGRESS } from '../actions/session_actions';
 
 const initialState = {
 isAuthenticated: false,
@@ -24,6 +24,10 @@ case RECEIVE_USER_LOGOUT:
  };
 case UPDATE_PROGRESS:
   return Object.assign({}, state, {progress: state.progress+1})
+  
+case RESET_PROGRESS:
+  return Object.assign({}, state, {progress: 0})
+
 default:
  return state;
 }

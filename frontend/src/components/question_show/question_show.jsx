@@ -14,7 +14,6 @@ export default class QuestionShow extends React.Component {
     }
 
     handleSubmit (e) {
-        debugger
        e.preventDefault()
         let c = 0;
        const chx = document.querySelectorAll("[class^=rad]");
@@ -39,7 +38,14 @@ export default class QuestionShow extends React.Component {
 
     }
     componentDidMount () {
-        this.props.requestByProgress(this.props.progress)
+        if (this.props.progress) {
+
+            this.props.requestByProgress(this.props.progress)
+        } else {
+            this.props.resetProgress()
+            this.props.requestByProgress(this.props.progress)
+
+        }
     }
     
     componentDidUpdate (prevProps) {
