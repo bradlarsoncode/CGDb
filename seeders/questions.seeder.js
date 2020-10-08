@@ -56,10 +56,17 @@ const data = [
     prompt: "“How are you feeling today?:",
     progress: 1,
     responses: [
-      { text: "Great!", pv: -1 },
-      { text: "Better", pv: -1 },
-      { text: "Fine", pv: -1 },
-      { text: "Worse", pv: -1 },
+
+      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
+      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
+      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
+      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
+      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
+      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
+      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
+      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
+      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
+      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
       { text: "Awful", pv: -1 }   // TODO create function to make all selections become "Awful"
     ],
     ui_bank: 2
@@ -78,11 +85,11 @@ const data = [
     progress: 3,
     responses: [
       "https://webfilms-films.s3.amazonaws.com/sounds/weird+voice.wav",
-      { image: "", subImage: "", pv: -1 },
-      { image: "", subImage: "", pv: -1 },
-      { image: "", subImage: "", pv: -1 },
-      { image: "", subImage: "", pv: 0 },
-      { image: "", subImage: "", pv: 0 }
+      { image: "https://drive.google.com/file/d/1zpAcElp0Di8J-_Kw5HWiFs8TdE4NS9Bz/view?usp=sharing", subImage: "https://drive.google.com/file/d/1vMC3hB81UPXZu4egI6mfycYKcjbRpp_6/view?usp=sharing", pv: -1 },
+      { image: "https://drive.google.com/file/d/1m6UuU53Bxj-HBRw7flvXd1UgPd0l90Gv/view?usp=sharing", subImage: "https://drive.google.com/file/d/1K9sccE-Vg5Z9iHJGdDPcYtL0IKrSZpAk/view?usp=sharing", pv: -1 },
+      { image: "https://drive.google.com/file/d/1jSRcZjGuoHofdffyTtoci8zxXdzQiv8I/view?usp=sharing", subImage: "https://drive.google.com/file/d/1Blod3AQmXZeQm2obHF-XenjJ308oPk3f/view?usp=sharing", pv: -1 },
+      { image: "https://drive.google.com/file/d/1NEaGLnxrO5Ak6qlqftWvcdnfplpyL4PZ/view?usp=sharing", subImage: "https://drive.google.com/file/d/1y31C1QOPQPr2YBTXDVz2VGu2NQpMrd5n/view?usp=sharing", pv: 0 },
+      { image: "https://drive.google.com/file/d/12cfg_Np4RHx7nDJbRIz8gmr3d_wfvQP7/view?usp=sharing", subImage: "https://drive.google.com/file/d/1FOhQNu3sJC5XBdnYfLlVBYZ6zmq-8UMY/view?usp=sharing", pv: 0 }
     ],
     ui_bank: 4  // TODO creepy voices media should loop continuously: "https://webfilms-films.s3.amazonaws.com/sounds/weird+voice.wav"
   },
@@ -90,7 +97,15 @@ const data = [
     prompt: "Select whether this is good or bad:",
     progress: 4,
     responses: [
-      { images: [] },
+      {
+        images: [
+          "https://drive.google.com/file/d/1R7Zi9LK74yEoXJle2ZJKWCZ-LQti7rXe/view?usp=sharing",
+          "https://drive.google.com/file/d/1IAJaLgKi0cjFJwfXI6AVI1TOtu0XObYr/view?usp=sharing",
+          "https://drive.google.com/file/d/15zlVitiZUuTA0YC1ODg6Azjh6WYgSV66/view?usp=sharing",
+          "https://drive.google.com/file/d/1G3fO2jsTfQWEl3X3T8gz4bQXGd5C0ZH8/view?usp=sharing",
+          "https://drive.google.com/file/d/17hYytvEyo9F6MrsxFGAug9fFzyHU70Z7/view?usp=sharing"
+        ]
+      }
     ],
     ui_bank: 5  //TODO like the Harvard implicit survey, select if image is good or bad
   },
@@ -106,7 +121,7 @@ const data = [
     prompt: "Are you seeing things that other people cant see?:",
     progress: 6,
     responses: [
-      { images: [] },
+      "",
       { text: "Yes", pv: -1 },
       { text: "No", pv: 0 }
     ],
