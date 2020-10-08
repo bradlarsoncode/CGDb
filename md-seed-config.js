@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Questions = require( './seeders/questions.seeder');
+const Users = require( './seeders/users.seeder');
 const mURI = require('./config/keys').mongoURI;
 
 const mongoURL = process.env.MONGO_URL || mURI;
@@ -11,6 +12,7 @@ const mongoURL = process.env.MONGO_URL || mURI;
  */
 export const seedersList = {
   Questions,
+  Users
 };
 /**
  * Connect to mongodb implementation

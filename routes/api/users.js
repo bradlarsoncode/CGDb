@@ -53,6 +53,19 @@ router.patch('/', (req, res) => {
       })
   })
 
+router.patch('/resetSanity', (req, res) => {
+
+    User.findOne({ email: req.body.email })
+        .then(user => {
+            if (!user) {
+                return res.status(408).json({ email: 'This user does not exist' });
+            }
+            user.sanity = 0
+            user.save()
+            res.json(user)
+        })
+})
+
 router.post('/register', (req, res) => {
     const { errors, isValid } = validateRegisterInput(req.body);
   
