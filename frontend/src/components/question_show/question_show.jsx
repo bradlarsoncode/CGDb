@@ -2,6 +2,7 @@
 
 import React from 'react';
 import './question_show.scss'
+import './question_show.scss'
 export default class QuestionShow extends React.Component {
 
     constructor (props) {
