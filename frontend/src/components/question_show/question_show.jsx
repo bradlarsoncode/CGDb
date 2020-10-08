@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import './question_show.scss'
 export default class QuestionShow extends React.Component {
@@ -35,8 +36,8 @@ export default class QuestionShow extends React.Component {
         } else {
             this.setState({errors: 'Please answer all questions'})
         }
+      
 
-    }
     componentDidMount () {
         if (this.props.progress) {
 
@@ -52,22 +53,21 @@ export default class QuestionShow extends React.Component {
         if (this.props.progress !== prevProps.progress) {
             this.props.requestByProgress(this.props.progress)
         }
-    }
-
-    handleResponse () {
-        return e => {
-
-            let newEntry = {[e.target.name]: parseInt(e.target.value)}
-            let ngpv = {
-                ...this.state.gpv,
-                ...newEntry
-            }
-            this.setState({gpv: ngpv})
-           
-            
-        }
 
     }
+  }
+
+  handleResponse() {
+    return (e) => {
+      let newEntry = { [e.target.name]: parseInt(e.target.value) };
+      let ngpv = {
+        ...this.state.gpv,
+        ...newEntry,
+      };
+      this.setState({ gpv: ngpv });
+    };
+  }
+
     render () {
         let message;
         switch (this.props.progress) {
@@ -123,9 +123,9 @@ export default class QuestionShow extends React.Component {
         <p>
             {this.state.errors}
         </p>
+
         <button onClick={this.handleSubmit}>Submit</button>
-        </div>
-        
-        )
-    }
+      </div>
+    );
+  }
 }
