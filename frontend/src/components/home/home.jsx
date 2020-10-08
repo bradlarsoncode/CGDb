@@ -1,6 +1,7 @@
 import React from 'react';
 import './home.scss';
 import QuestionShow from '../question_show/question_show_container'
+import InterruptText from '../interrupt_text/interrupt_text_container'
 
 export default class Home extends React.Component {
 
@@ -17,6 +18,7 @@ export default class Home extends React.Component {
         else {
             return (
                 <div className='home-container'>
+                    <InterruptText />
                     <QuestionShow />
                 </div>
             )
