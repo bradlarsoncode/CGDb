@@ -54,7 +54,7 @@ export const balloon = () => {
   );
 };
 
-export const balloon = () => {
+export const pennies = () => {
   return (
     <div>
       <p>
