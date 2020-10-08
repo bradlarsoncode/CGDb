@@ -94,11 +94,11 @@ export default class QuestionShow extends React.Component {
         {this.props.questions ? (
           this.props.questions.map((question, i) => {
             return (
-              <li>
+              <li key={i}>
                 <p>{question.prompt}</p>
-                {question.responses.map((r) => {
+                {question.responses.map((r, i2) => {
                   return (
-                    <label>
+                    <label key={i2}>
                       <input
                         onClick={this.handleResponse()}
                         type="radio"
