@@ -16,16 +16,22 @@ $red: #7e1b1b;
 }
 
 .landing-container {
-  
   position: absolute;
-  left: 5%;
-  top: 170px;
-  width: 1600px;
-  background-color: rgba($color: $blue, $alpha: 0.7);
-  font-size: x-large;
+  width: 99%;
+  background-color: #0b151df0;
+  color: #b8995b;
+  text-shadow: 0 0 2px #b8995b;
+  font-size: larger;
   display: flex;
   flex-direction: column;
-  
+  border: 2px solid #b8995b;
+  border-radius: 5px;
+  bottom: 0;
+  left: 0.35%;
+
+  p {
+    padding: 10px;
+  }
 }
 
 @keyframes glitch-flicker {

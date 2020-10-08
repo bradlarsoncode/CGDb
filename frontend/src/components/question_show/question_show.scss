@@ -1,0 +1,168 @@
+$blue: #0c213a;
+$gold: #b8995c;
+$red: #7e1b1b;
+.home-container {
+  width: 100%;
+  margin-top: 20px;
+
+  .q-form {
+    box-shadow: inset 0 0 100px #000;
+    height: 100%;
+
+    li {
+      width: 80%;
+      margin: 0 auto;
+      text-align: left;
+      list-style: none;
+      padding: 10px 0;
+
+      label {
+        input[type="radio"] {
+          margin-right: 5px;
+        }
+      }
+    }
+
+    button {
+      background-size: 52px;
+      box-shadow: inset 0 0 100px #000;
+      overflow: hidden;
+      height: 70px;
+      width: 25%;
+      color: white;
+      font-size: 1.3rem;
+      margin: 0 auto;
+      background-color: #b8995b;
+      text-align: center;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        position: absolute;
+        left: 0;
+      }
+
+      &::before {
+        /* Red gradients for blood */
+        background-size: 84% 99%, 300px 88%, 210px 216px, 100px 269px,
+          307px 100%;
+        background: linear-gradient(#ff000000 50%, transparent 60%)
+            radial-gradient(#d40000 50%, transparent 70%)
+            radial-gradient(red 30%, transparent 40%)
+            radial-gradient(#d40000 10%, transparent 20%)
+            radial-gradient(red 10%, transparent 15%) 14px 12px,
+          -100% -71%, 65% 5%, 2% 24%, 4% 49%;
+
+        /* Background blend for bleed effect */
+        mix-blend-mode: multiply;
+
+        /* Mouse ignore blood */
+        pointer-events: none;
+
+        /* Hide before hover transition */
+        opacity: 0;
+        transform: translateY(-100%);
+
+        /* Mouseout effect */
+        transition: opacity 3s linear, transform 1s 3s linear;
+
+        height: 100%;
+        top: 0;
+      }
+
+      /* Hover transition */
+      &:hover::before {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 3s 0s; //, transform 5s 0s linear;
+      }
+
+      /* Header bottom edge */
+      &::after {
+        background-image: radial-gradient(#07050a 40%, transparent 41%),
+          radial-gradient(#07050a 40%, transparent 41%);
+        background-size: 104px 104px;
+        background-position: 0 0, 52px 0;
+
+        height: 104px;
+        bottom: -52px;
+        z-index: -1;
+      }
+    }
+
+    p {
+      font-size: 1.3rem;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    text-align: center;
+    padding: 2em 2em 3em;
+    position: relative;
+  }
+}
+
+.tagline {
+  color: #dcbd77;
+  margin: 0;
+}
+
+/* Remove effects on mobile, fix nav */
+@media (max-width: 714px) {
+  .q-form::before {
+    display: none;
+  }
+
+  .q-form {
+    button {
+      line-height: 2.5;
+      padding: 1em;
+      white-space: nowrap;
+
+      &:hover {
+        letter-spacing: 0;
+      }
+    }
+  }
+}
+
+.form-errors {
+  color: red;
+}
+
+.q-form-container {
+  color: #fefefe;
+  border-style: solid;
+  border-width: 1px;
+  border-color: $gold;
+  border-radius: 10px 10px 10px 10px;
+  background-image: linear-gradient(-90deg, #0c213ad1 0%, #b8995ce0 100%);
+  width: 90%;
+  min-width: 400px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+.interrupt-text-container {
+  p {
+    animation: hide 2s ease-out;
+    opacity: 0;
+    //transition: 3s;
+  }
+}
+
+@keyframes hide {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
