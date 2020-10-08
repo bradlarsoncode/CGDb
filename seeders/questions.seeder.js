@@ -1,14 +1,24 @@
 import { Seeder } from 'mongoose-data-seed';
 import Question from '../models/Question';
+// const Question = require('../models/Question');
 
 const data = [
   {
     prompt: "The CGDb is:",
     progress: 0,
     responses: [
-      {text: "Here to help me", pv: 0},
-      {text: "Listening to my thoughts", pv: -1},
-      {text: "Not real", pv: -1}
+      { text: "Here to help me", pv: 0 },
+      { text: "Listening to my thoughts", pv: -1 },
+      { text: "Not real", pv: -1 }
+    ],
+    ui_bank: 0
+  },
+  {
+    prompt: "When was the last time you've taken this assesment?:",
+    progress: 0,
+    responses: [
+      { text: "I've never taken this before", pv: -1 },
+      { text: "Yesterday", pv: 0 }
     ],
     ui_bank: 0
   },
@@ -56,16 +66,16 @@ const data = [
   },
   {
     prompt: "When you feel miserable, do you like people to suffer too?:",
-    progress: 1,
+    progress: 2,
     responses: [
       { text: "TRUE", pv: -1 , media: "https://webfilms-films.s3.amazonaws.com/sounds/scream.wav"}, // TODO normalize meda src
-      { text: "FALSE", pv: 0 } // TODO it's a dead button, must select TRUE
+      { text: "TRUE", pv: -1 }
     ],
     ui_bank: 3
   },
   {
     prompt: "What are the voices telling you to do?:",
-    progress: 1,
+    progress: 3,
     responses: [
       "https://webfilms-films.s3.amazonaws.com/sounds/weird+voice.wav",
       { image: "", subImage: "", pv: -1 },
@@ -78,7 +88,7 @@ const data = [
   },
   {
     prompt: "Select whether this is good or bad:",
-    progress: 1,
+    progress: 4,
     responses: [
       { images: [] },
     ],
@@ -86,7 +96,7 @@ const data = [
   },
   {
     prompt: "Select the correct button",
-    progress: 1,
+    progress: 5,
     responses: [
       {pv: -1}
     ],
@@ -94,7 +104,7 @@ const data = [
   },
   {
     prompt: "Are you seeing things that other people cant see?:",
-    progress: 1,
+    progress: 6,
     responses: [
       { images: [] },
       { text: "Yes", pv: -1 },
@@ -104,7 +114,7 @@ const data = [
   },
   {
     prompt: "Darkness reveals the truth",
-    progress: 1,
+    progress: 7,
     responses: [
       { media: "" }
     ],
