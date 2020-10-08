@@ -4,15 +4,29 @@ import * as Text from '../../assets/text'
 class InterruptText extends React.Component {
 
     render() {
-        // console.log(Text.shadow())
+        let scaryText
+        switch (this.props.progress) {
+            case 1:
+                scaryText = Text.stare();
+                break;
+            case 2:
+                scaryText = Text.amps();
+                break;
+            case 3:
+                scaryText = Text.pennies();
+                break;
+            case 4:
+                scaryText = Text.balloon();
+                break;
+            case 5:
+                scaryText = Text.shadow();
+                break;
+            default:
+        }
+        // console.log(this.props.progress)
         return (
             <div className='interrupt-text-container'>
-                <p>A long black shadow slid across the pavement near their feet.
-                They were barely in time to see the huge gray form of the carnivore 
-                before it vanished 
-                behind 
-                a veil 
-            of smoke.</p>
+                {scaryText}
             </div>
         )
     }

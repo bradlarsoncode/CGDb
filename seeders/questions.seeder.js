@@ -57,17 +57,17 @@ const data = [
     progress: 1,
     responses: [
 
-      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
-      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
-      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
-      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
-      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
-      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
-      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
-      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
-      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
-      { text: "Awful", pv: -1 },   // TODO create function to make all selections become "Awful"
-      { text: "Awful", pv: -1 }   // TODO create function to make all selections become "Awful"
+      { text: "Awful", pv: -1 },   
+      { text: "Awful", pv: -1 },   
+      { text: "Awful", pv: -1 },   
+      { text: "Awful", pv: -1 },   
+      { text: "Awful", pv: -1 },   
+      { text: "Awful", pv: -1 },   
+      { text: "Awful", pv: -1 },  
+      { text: "Awful", pv: -1 },   
+      { text: "Awful", pv: -1 },   
+      { text: "Awful", pv: -1 },
+      { text: "Awful", pv: -1 }
     ],
     ui_bank: 2
   },
@@ -121,7 +121,7 @@ const data = [
     prompt: "Are you seeing things that other people cant see?:",
     progress: 6,
     responses: [
-      "",
+      "https://drive.google.com/file/d/1p-aVxQ4Ytytuk_Zahk75hXOrc1XEDc0t/view?usp=sharing",
       { text: "Yes", pv: -1 },
       { text: "No", pv: 0 }
     ],
@@ -131,7 +131,7 @@ const data = [
     prompt: "Darkness reveals the truth",
     progress: 7,
     responses: [
-      { media: "" }
+      "https://drive.google.com/file/d/1nTxx3fUc2I48YnXLlbFSfle3vbm1xqvv/view?usp=sharing"
     ],
     ui_bank: 8  //TODO when user hits the switch/lightbulb, background goes dark and user gets an audio or video jump scare
   },
