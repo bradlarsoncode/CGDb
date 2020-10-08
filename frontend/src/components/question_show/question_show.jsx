@@ -64,7 +64,7 @@ export default class QuestionShow extends React.Component {
         break;
     }
     return (
-      <div className="q-form">
+      <div className="q-form q-form-container">
         <h3>{message}</h3>
         {this.props.questions ? (
           this.props.questions.map((question, i) => {
