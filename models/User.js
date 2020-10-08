@@ -28,3 +28,7 @@ const UserSchema = new Schema({
 
 
 module.exports = User = mongoose.model('users', UserSchema);
+
+// TODO undable to import Users into seedfile unless export setup like below:
+// const User = mongoose.model('users', UserSchema);
+// module.exports = User;
