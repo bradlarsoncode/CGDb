@@ -4,7 +4,13 @@ import videoLink from "../../assets/landing-background.webm";
 
 const BackgroundVideo = () => {
   return (
-    <video autoPlay="autoplay" loop="loop" muted className="background-video">
+    <video
+      autoPlay="autoplay"
+      loop="loop"
+      muted
+      className="background-video "
+      id="background-video"
+    >
       <source src={videoLink} type="video/mp4" />
       Your browser does not support the video tag.
     </video>

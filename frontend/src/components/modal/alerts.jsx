@@ -4,6 +4,7 @@ import Snackbar from "@material-ui/core/Snackbar";
 import Alert from "@material-ui/lab/Alert";
 import { makeStyles } from "@material-ui/core/styles";
 import { setAlert } from "../../reducers/alerts_reducers";
+import "./alerts.scss";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -28,7 +29,12 @@ const CustomAlert = () => {
 
   return (
     <div className={classes.root}>
-      <Snackbar open={alertOpen} autoHideDuration={3000} onClose={handleClose}>
+      <Snackbar
+        open={alertOpen}
+        autoHideDuration={3000}
+        onClose={handleClose}
+        bodyStyle={{ backgroundColor: "#0c213a", color: "white" }}
+      >
         <Alert
           elevation={6}
           variant="filled"
