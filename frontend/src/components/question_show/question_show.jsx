@@ -1,7 +1,7 @@
-
 import React from "react";
 import questionPart from "./questionsParts";
 import "./question_show.scss";
+
 export default class QuestionShow extends React.Component {
   constructor(props) {
     super(props);
@@ -67,25 +67,27 @@ export default class QuestionShow extends React.Component {
       case 0:
         ui = (
           <audio
-            autoPlay loop  //added autoPlay loop -Dennis
+            autoPlay
+            loop //added autoPlay loop -Dennis
             ref={(input) => {
               this.reff = input;
             }}
             src="https://webfilms-films.s3.amazonaws.com/sounds/background.wav"
-            ></audio>
-            );
-            message =
-            "Thank you for your interest in our program. Please begin with the following initial questions:";
-            break;
-            default:
-              break;
-            }
+          ></audio>
+        );
+        message =
+          "Thank you for your interest in our program. Please begin with the following initial questions:";
+        break;
+      default:
+        break;
+    }
     if (this.props.questions)
       switch (this.props.questions[0].ui_bank) {
         case 4:
           ui = (
             <audio
-              autoPlay loop  //added autoPlay loop -Dennis
+              autoPlay
+              loop //added autoPlay loop -Dennis
               ref={(input) => {
                 this.reff = input;
               }}
@@ -96,7 +98,8 @@ export default class QuestionShow extends React.Component {
         case 3:
           ui = (
             <audio
-              autoPlay loop  //added autoPlay loop -Dennis
+              autoPlay
+              loop //added autoPlay loop -Dennis
               ref={(input) => {
                 this.reff = input;
               }}
@@ -104,7 +107,7 @@ export default class QuestionShow extends React.Component {
             ></audio>
           );
           break;
-          // TODO added by dennis
+        // TODO added by dennis
         // case 5:
         //   ui = (
         //     {this.props.question.responses.image.map((image, i) => {
@@ -117,26 +120,26 @@ export default class QuestionShow extends React.Component {
         // break;
         case 7:
           ui = (
-            <img className="response-gif"
+            <img
+              className="response-gif"
               ref={(input) => {
                 this.reff = input;
               }}
               src={this.props.questions[0].responses[0]}
-             />
-           );
-           break;
-          //
-        
+            />
+          );
+          break;
+        //
+
         default:
           break;
       }
-    return (
-      <div className="question-part">
 
+    return (
+      <div className={`question-part`}>
         {questionPart[this.props.progress]}
 
-        <div className="q-form q-form-container">
-          {questionPart[this.props.progress]}
+        <div className={`q-form q-form-container `}>
           <h3>{message}</h3>
           {ui}
           {this.props.questions ? (
@@ -160,7 +163,7 @@ export default class QuestionShow extends React.Component {
                         />
                         {r.text}
                         {/* added by dennis */}
-                        <img className="response-image" src={r.image} /> 
+                        <img className="response-image" src={r.image} />
                         <br />
                       </label>
                     );
@@ -174,7 +177,6 @@ export default class QuestionShow extends React.Component {
           <p>{this.state.errors}</p>
 
           <button onClick={this.handleSubmit}>Submit</button>
-
         </div>
       </div>
     );
