@@ -76,8 +76,8 @@ const data = [
     progress: 2,
     responses: [
       "https://webfilms-films.s3.amazonaws.com/sounds/scream.wav",
-      { text: "TRUE", pv: -1 , media: "https://webfilms-films.s3.amazonaws.com/sounds/scream.wav"}, // TODO normalize meda src
-      { text: "TRUE", pv: -1 }
+      { text: "TRUE", pv: -1 },
+      { text: "Yes, even when they dont deserve it", pv: -1 },
     ],
     ui_bank: 3
   },
@@ -87,8 +87,8 @@ const data = [
     responses: [
       "https://webfilms-films.s3.amazonaws.com/sounds/weird+voice.wav",
       { image: "https://drive.google.com/thumbnail?id=1vMC3hB81UPXZu4egI6mfycYKcjbRpp_6", pv: -1 },
-      { image: "https://drive.google.com/thumbnail?id=1K9sccE-Vg5Z9iHJGdDPcYtL0IKrSZpAk", pv: -1 },
-      { image: "https://drive.google.com/thumbnail?id=1Blod3AQmXZeQm2obHF-XenjJ308oPk3f", pv: 0 }
+      { image: "https://drive.google.com/thumbnail?id=1y31C1QOPQPr2YBTXDVz2VGu2NQpMrd5n", pv: -1 },
+      { image: "https://drive.google.com/thumbnail?id=1FOhQNu3sJC5XBdnYfLlVBYZ6zmq-8UMY", pv: 0 }
       // { image: "https://drive.google.com/thumbnail?id=1y31C1QOPQPr2YBTXDVz2VGu2NQpMrd5n", pv: -1 },
       // { image: "https://drive.google.com/thumbnail?id=1FOhQNu3sJC5XBdnYfLlVBYZ6zmq-8UMY", pv: 0 }
     ],
@@ -123,8 +123,8 @@ const data = [
     progress: 4,
     responses: [
       "https://drive.google.com/thumbnail?id=1p-aVxQ4Ytytuk_Zahk75hXOrc1XEDc0t",
-      { text: "Yes", pv: -10 },
-      { text: "No", pv: -10 }
+      { text: "Yes", pv: -1 },
+      { text: "No", pv: -0 }
     ],
     ui_bank: 7  //TODO montage of images are shown in modal
   }
@@ -132,14 +132,16 @@ const data = [
   //   prompt: "Darkness reveals the truth",
   //   progress: 5,
   //   responses: [
-  //     "https://drive.google.com/file/d/1nTxx3fUc2I48YnXLlbFSfle3vbm1xqvv/view?usp=sharing",
+  //     "https://webfilms-films.s3.amazonaws.com/shot.mp4",
   //     {pv: -10}
   //   ],
   //   ui_bank: 8  //TODO when user hits the switch/lightbulb, background goes dark and user gets an audio or video jump scare
   // }
   
-
-
+//   < video autoPlay width = "320" height = "240" controls >
+//   <source src="https://webfilms-films.s3.amazonaws.com/shot.mp4" type="video/mp4">
+// </video>
+// <video autoplay src="https://webfilms-films.s3.amazonaws.com/shot.mp4" type="video/mp4"></video>
 ]
 
 class QuestionsSeeder extends Seeder {
