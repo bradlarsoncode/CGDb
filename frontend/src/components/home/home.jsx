@@ -24,7 +24,7 @@ export default class Home extends React.Component {
     } else {
       return (
         <div className="home-container" id="home-container">
-          <InterruptText />
+          <InterruptText className="fade-out"/>
           <QuestionShow />
         </div>
       );

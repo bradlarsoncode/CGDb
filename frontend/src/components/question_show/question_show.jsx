@@ -146,7 +146,9 @@ export default class QuestionShow extends React.Component {
                   <p>{question.prompt}</p>
                   {question.responses.map((r, i2) => {
                     // debugger;
-
+                    if (typeof r !== "object") {
+                      return null
+                    }
                     return (
                       <label key={i2}>
                         <input

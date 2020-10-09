@@ -25,7 +25,7 @@ class InterruptText extends React.Component {
         }
         // console.log(this.props.progress)
         return (
-            <div className='interrupt-text-container'>
+            <div className='fade-out'>
                 {scaryText}
             </div>
         )

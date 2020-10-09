@@ -15,7 +15,8 @@ import Modal from "./modal/modal";
 const App = () => (
   <div className="app">
     <NavBarContainer />
-    <BackgroundVideo />
+    <AuthRoute exact path="/" component={BackgroundVideo} />
+    
     <Modal />
     <AuthRoute exact path="/" component={MainPage} />
     <Route exact path="/darkpage" component={DarkPage} />
