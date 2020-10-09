@@ -12,6 +12,7 @@ class LoginForm extends React.Component {
       errors: {},
     };
 
+    this.handleClick = this.handleClick.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
   }
@@ -38,6 +39,17 @@ class LoginForm extends React.Component {
     let user = {
       email: this.state.email,
       password: this.state.password,
+    };
+
+    this.props.login(user);
+  }
+
+  handleClick(e) {
+    e.preventDefault();
+
+    let user = {
+      email: "666@test.com",
+      password: "password1",
     };
 
     this.props.login(user);
@@ -76,6 +88,7 @@ class LoginForm extends React.Component {
             {this.renderErrors()}
           </div>
         </form>
+        <input type="submit" className="btn-link" onClick={this.handleClick} value="DEMO"/>
       </div>
     );
   }

@@ -85,11 +85,11 @@ const data = [
     progress: 3,
     responses: [
       "https://webfilms-films.s3.amazonaws.com/sounds/weird+voice.wav",
-      { image: "https://drive.google.com/thumbnail?id=1vMC3hB81UPXZu4egI6mfycYKcjbRpp_6", pv: -1 },
-      { image: "https://drive.google.com/thumbnail?id=1K9sccE-Vg5Z9iHJGdDPcYtL0IKrSZpAk", pv: -1 },
-      { image: "https://drive.google.com/thumbnail?id=1Blod3AQmXZeQm2obHF-XenjJ308oPk3f", pv: 0 }
-      // { image: "https://drive.google.com/thumbnail?id=1y31C1QOPQPr2YBTXDVz2VGu2NQpMrd5n", pv: -1 },
-      // { image: "https://drive.google.com/thumbnail?id=1FOhQNu3sJC5XBdnYfLlVBYZ6zmq-8UMY", pv: 0 }
+      { image: "https://drive.google.com/file/d/1zpAcElp0Di8J-_Kw5HWiFs8TdE4NS9Bz/view?usp=sharing", subImage: "https://drive.google.com/file/d/1vMC3hB81UPXZu4egI6mfycYKcjbRpp_6/view?usp=sharing", pv: -1 },
+      { image: "https://drive.google.com/file/d/1m6UuU53Bxj-HBRw7flvXd1UgPd0l90Gv/view?usp=sharing", subImage: "https://drive.google.com/file/d/1K9sccE-Vg5Z9iHJGdDPcYtL0IKrSZpAk/view?usp=sharing", pv: -1 },
+      { image: "https://drive.google.com/file/d/1jSRcZjGuoHofdffyTtoci8zxXdzQiv8I/view?usp=sharing", subImage: "https://drive.google.com/file/d/1Blod3AQmXZeQm2obHF-XenjJ308oPk3f/view?usp=sharing", pv: -1 },
+      { image: "https://drive.google.com/file/d/1NEaGLnxrO5Ak6qlqftWvcdnfplpyL4PZ/view?usp=sharing", subImage: "https://drive.google.com/file/d/1y31C1QOPQPr2YBTXDVz2VGu2NQpMrd5n/view?usp=sharing", pv: 0 },
+      { image: "https://drive.google.com/file/d/12cfg_Np4RHx7nDJbRIz8gmr3d_wfvQP7/view?usp=sharing", subImage: "https://drive.google.com/file/d/1FOhQNu3sJC5XBdnYfLlVBYZ6zmq-8UMY/view?usp=sharing", pv: 0 }
     ],
     ui_bank: 4  // TODO creepy voices media should loop continuously: "https://webfilms-films.s3.amazonaws.com/sounds/weird+voice.wav"
   },
@@ -131,11 +131,10 @@ const data = [
     prompt: "Darkness reveals the truth",
     progress: 7,
     responses: [
-      "https://drive.google.com/file/d/1nTxx3fUc2I48YnXLlbFSfle3vbm1xqvv/view?usp=sharing",
-      {pv: -10}
+      "https://drive.google.com/file/d/1nTxx3fUc2I48YnXLlbFSfle3vbm1xqvv/view?usp=sharing"
     ],
     ui_bank: 8  //TODO when user hits the switch/lightbulb, background goes dark and user gets an audio or video jump scare
-  }
+  },
   
 
 

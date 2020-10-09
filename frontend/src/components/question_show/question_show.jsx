@@ -76,7 +76,7 @@ export default class QuestionShow extends React.Component {
         case 4:
           ui = (
             <audio
-              controls
+              autoPlay loop  //added autoPlay loop -Dennis
               ref={(input) => {
                 this.reff = input;
               }}
@@ -115,6 +115,8 @@ export default class QuestionShow extends React.Component {
                           name={`radAnswer-${i}`}
                         />
                         {r.text}
+                        {/* added by dennis */}
+                        <img className="response-image" src={r.image} /> 
                         <br />
                       </label>
                     );
