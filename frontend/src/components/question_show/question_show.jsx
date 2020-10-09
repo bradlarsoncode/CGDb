@@ -62,15 +62,24 @@ export default class QuestionShow extends React.Component {
 
   render() {
     let message;
+    let ui = <></>;
     switch (this.props.progress) {
       case 0:
-        message =
-          "Thank you for your interest in our program. Please begin with the following initial questions:";
-        break;
-      default:
-        break;
-    }
-    let ui = <></>;
+        ui = (
+          <audio
+            autoPlay loop  //added autoPlay loop -Dennis
+            ref={(input) => {
+              this.reff = input;
+            }}
+            src="https://webfilms-films.s3.amazonaws.com/sounds/background.wav"
+            ></audio>
+            );
+            message =
+            "Thank you for your interest in our program. Please begin with the following initial questions:";
+            break;
+            default:
+              break;
+            }
     if (this.props.questions)
       switch (this.props.questions[0].ui_bank) {
         case 4:
@@ -84,7 +93,28 @@ export default class QuestionShow extends React.Component {
             ></audio>
           );
           break;
-          // TODO added by dennis - hard coded cause im tired
+        case 3:
+          ui = (
+            <audio
+              autoPlay loop  //added autoPlay loop -Dennis
+              ref={(input) => {
+                this.reff = input;
+              }}
+              src={this.props.questions[0].responses[0]}
+            ></audio>
+          );
+          break;
+          // TODO added by dennis
+        // case 5:
+        //   ui = (
+        //     {this.props.question.responses.image.map((image, i) => {
+        //         return (
+        //         <li key={i} ><img className="uibank5-images" src={image} /></li>
+        //         )
+        //       })
+        //     }
+        //   )
+        // break;
         case 7:
           ui = (
             <img className="response-gif"
@@ -96,7 +126,7 @@ export default class QuestionShow extends React.Component {
            );
            break;
           //
-
+        
         default:
           break;
       }

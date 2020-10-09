@@ -9,6 +9,9 @@ export default class Home extends React.Component {
       this.props.resetSanity(this.props.currentUser.email);
       return (
         <div className="gameover">
+          <audio autoPlay loop
+            src="https://webfilms-films.s3.amazonaws.com/sounds/laugh.wav">
+          </audio>
           <p>
             {" "}
             The CGDb are unable to help you today. Please remain still until
