@@ -98,25 +98,25 @@ const data = [
     progress: 4,
     responses: [
       {
-        images: [
-          "https://drive.google.com/file/d/1R7Zi9LK74yEoXJle2ZJKWCZ-LQti7rXe/view?usp=sharing",
-          "https://drive.google.com/file/d/1IAJaLgKi0cjFJwfXI6AVI1TOtu0XObYr/view?usp=sharing",
-          "https://drive.google.com/file/d/15zlVitiZUuTA0YC1ODg6Azjh6WYgSV66/view?usp=sharing",
-          "https://drive.google.com/file/d/1G3fO2jsTfQWEl3X3T8gz4bQXGd5C0ZH8/view?usp=sharing",
-          "https://drive.google.com/file/d/17hYytvEyo9F6MrsxFGAug9fFzyHU70Z7/view?usp=sharing"
+        image: [
+          "https://drive.google.com/thumbnail?id=1R7Zi9LK74yEoXJle2ZJKWCZ-LQti7rXe",
+          "https://drive.google.com/thumbnail?id=1IAJaLgKi0cjFJwfXI6AVI1TOtu0XObYr",
+          "https://drive.google.com/thumbnail?id=15zlVitiZUuTA0YC1ODg6Azjh6WYgSV66",
+          "https://drive.google.com/thumbnail?id=1G3fO2jsTfQWEl3X3T8gz4bQXGd5C0ZH8",
+          "https://drive.google.com/thumbnail?id=17hYytvEyo9F6MrsxFGAug9fFzyHU70Z7"
         ]
       }
     ],
     ui_bank: 5  //TODO like the Harvard implicit survey, select if image is good or bad
   },
-  {
-    prompt: "Select the correct button",
-    progress: 5,
-    responses: [
-      {pv: -1}
-    ],
-    ui_bank: 6  // TODO random buttons that will multiply whenever it is clicked.  After buttons are pressed 10 times, progress to next page.
-  },
+  // {
+  //   prompt: "Select the correct button",
+  //   progress: 5,
+  //   responses: [
+  //     {pv: -1}
+  //   ],
+  //   ui_bank: 6  // TODO random buttons that will multiply whenever it is clicked.  After buttons are pressed 10 times, progress to next page.
+  // },
   {
     prompt: "Are you seeing things that other people cant see?:",
     progress: 6,
