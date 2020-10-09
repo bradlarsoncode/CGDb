@@ -137,10 +137,10 @@ export default class QuestionShow extends React.Component {
 
     return (
       <div className={`question-part`}>
-        {questionPart[this.props.progress]}
-
+      
         <div className={`q-form q-form-container `}>
           <h3>{message}</h3>
+          <p className='sane-lvl'>{this.props.currentUser.sanity}</p>
           {ui}
           {this.props.questions ? (
             this.props.questions.map((question, i) => {

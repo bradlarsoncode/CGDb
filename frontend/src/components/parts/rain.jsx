@@ -3,7 +3,7 @@ import "./rain.scss";
 
 const Rain = (props) => {
   let hrElement;
-  let counter = 100;
+  let counter = 50;
   let homeContainer = document.getElementById("home-container");
   for (let i = 0; i < counter; i++) {
     hrElement = document.createElement("HR");
