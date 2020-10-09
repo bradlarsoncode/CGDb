@@ -11,8 +11,7 @@ export default class Home extends React.Component {
         <div className="gameover">
           <p>
             {" "}
-            The CGDb thanks you for your participation today. Unfortunately, the
-            medications aren’t working strong enough. Please remain still until
+            The CGDb are unable to help you today. Please remain still until
             a nurse can administer your medications. You know what happens if
             you try to move… See you tomorrow.{" "}
           </p>
