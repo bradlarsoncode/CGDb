@@ -76,8 +76,8 @@ const data = [
     progress: 2,
     responses: [
       "https://webfilms-films.s3.amazonaws.com/sounds/scream.wav",
-      { text: "TRUE", pv: -1 },
-      { text: "Yes, even when they dont deserve it", pv: -1 },
+      { text: "True", pv: -1 },
+      { text: "Especially when they dont deserve it", pv: -1 },
     ],
     ui_bank: 3
   },
