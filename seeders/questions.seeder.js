@@ -121,7 +121,7 @@ const data = [
     prompt: "Are you seeing things that other people cant see?:",
     progress: 6,
     responses: [
-      "https://drive.google.com/file/d/1p-aVxQ4Ytytuk_Zahk75hXOrc1XEDc0t/view?usp=sharing",
+      "https://drive.google.com/thumbnail?id=1p-aVxQ4Ytytuk_Zahk75hXOrc1XEDc0t",
       { text: "Yes", pv: -1 },
       { text: "No", pv: 0 }
     ],
