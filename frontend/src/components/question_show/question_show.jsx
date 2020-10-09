@@ -93,6 +93,17 @@ export default class QuestionShow extends React.Component {
             ></audio>
           );
           break;
+        case 3:
+          ui = (
+            <audio
+              autoPlay loop  //added autoPlay loop -Dennis
+              ref={(input) => {
+                this.reff = input;
+              }}
+              src={this.props.questions[0].responses[0]}
+            ></audio>
+          );
+          break;
           // TODO added by dennis
         // case 5:
         //   ui = (
