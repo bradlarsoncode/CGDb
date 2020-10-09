@@ -37,9 +37,7 @@ class Navbar extends React.Component {
           </div>
           <div>
             <div className="btn-link">
-              <Link to={"/profile"}>
                 <button className="link-inner">Profile</button>
-              </Link>
             </div>
             <div className="btn-link">
               <button onClick={this.logoutUser} className="link-inner">

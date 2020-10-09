@@ -21,7 +21,16 @@ export default class Home extends React.Component {
           <p>- Drs. Chris, Gio, Dennis and Brad</p>
         </div>
       );
-    } else {
+    } else if (this.props.progress && this.props.progress > 4) {
+      setInterval(() => { this.props.updateSanity(this.props.currentUser.email, -20)
+        .then(resp => (this.props.receiveCurrentUser(resp.data))) }, 11000);
+        return (
+          <div className="gunshot">
+            <video autoPlay src="https://webfilms-films.s3.amazonaws.com/end+screen.mp4" type="video/mp4"></video>
+          </div>
+        )
+    }
+    else {
       return (
         <div className="home-container" id="home-container">
           <InterruptText className="fade-out"/>
