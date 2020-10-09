@@ -22,7 +22,7 @@ export default class Home extends React.Component {
         </div>
       );
     } else if (this.props.progress && this.props.progress > 4) {
-      setInterval(() => { this.props.updateSanity(this.props.currentUser.email, -20)
+      setTimeout(() => { this.props.updateSanity(this.props.currentUser.email, -20)
         .then(resp => (this.props.receiveCurrentUser(resp.data))) }, 11000);
         return (
           <div className="gunshot">
