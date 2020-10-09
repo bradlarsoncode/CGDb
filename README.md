@@ -161,10 +161,10 @@ Visual effects and puzzles will be diplayed through the use of css styling and C
 
 ## Technical Challenges
 
-Difficilties with feature implementation involve setting up proper communcation between the various frontend and backend technologies, adding visual/audio stlye to the frontend components, as well as maintaining adequate communication between contributors via remote locations. Particularly challenging problems (and subsequent solutions) will be listed below:
+Difficulties with feature implementation involve setting up proper communcation between the various frontend and backend technologies, adding visual/audio style to the frontend components, as well as maintaining adequate communication between contributors via remote locations. Particularly challenging problems (and subsequent solutions) will be listed below:
 
-
-
+Tracking sanity score of the user and maintaining game balance.
+Getting media to play/render correctly 
 
 ***
 ***
