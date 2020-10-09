@@ -84,6 +84,18 @@ export default class QuestionShow extends React.Component {
             ></audio>
           );
           break;
+          // TODO added by dennis - hard coded cause im tired
+        case 7:
+          ui = (
+            <img className="response-gif"
+              ref={(input) => {
+                this.reff = input;
+              }}
+              src={this.props.questions[0].responses[0]}
+             />
+           );
+           break;
+          //
 
         default:
           break;
