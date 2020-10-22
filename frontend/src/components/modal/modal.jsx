@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 
 import LoginFormContainer from "../session/login_form_container";
 import SignupFormContainer from "../session/signup_form_container";
+import ProfileShowContainer from "../profile_show/profile_show_container";
 import "./modal.scss";
 
 function Modal({ modal, closeModal }) {
@@ -18,6 +19,8 @@ function Modal({ modal, closeModal }) {
     case "signup":
       component = <SignupFormContainer />;
       break;
+    case "profile":
+      component = <ProfileShowContainer />;
     default:
       return null;
   }

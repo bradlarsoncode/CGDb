@@ -7,6 +7,9 @@ export default class ProfileShow extends React.Component {
     }
 
     render() {
-        
+        return (
+            <div></div>
+        )
+
     }
 }

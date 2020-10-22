@@ -37,7 +37,12 @@ class Navbar extends React.Component {
           </div>
           <div>
             <div className="btn-link">
-                <button className="link-inner">Profile</button>
+              <button
+                onClick={() => this.props.openModal("profile")}
+                className="link-inner"
+              >
+                Profile
+              </button>
             </div>
             <div className="btn-link">
               <button onClick={this.logoutUser} className="link-inner">
