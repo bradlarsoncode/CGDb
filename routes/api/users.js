@@ -19,23 +19,16 @@ router.get("/test", (req, res) => {
 
 
 router.get('/current', passport.authenticate('jwt', {session: false}), (req, res) => {
-res.json({
-    id: req.user.id,
-    name: req.user.name,
-    email: req.user.email,
+    res.json({
+        id: req.user.id,
+        name: req.user.name,
+        email: req.user.email,
+        playthrough: req.user.playthrough,
+        progress: req.user.progress,
+        sanity: req.user.sanity
 
-});
+    });
 })
-
-// router.patch('/:id', (req, res) => {
-//     User.findOne({id: req.params.id })
-//         .then(user => {
-//             user.sanity = user.sanity + req.body.sanity;
-//             user.save
-//             res.json(user)
-//         }
-//         )
-// })
 
 router.patch('/', (req, res) => {
     const email = req.body.email;
@@ -47,11 +40,12 @@ router.patch('/', (req, res) => {
           return res.status(408).json({email: 'This user does not exist'});
         }
         user.sanity = user.sanity + saneChange;
+        user.progress += 1
         user.save()
         res.json(user)
         
       })
-  })
+})
 
 router.patch('/resetSanity', (req, res) => {
 
@@ -61,6 +55,8 @@ router.patch('/resetSanity', (req, res) => {
                 return res.status(408).json({ email: 'This user does not exist' });
             }
             user.sanity = 0
+            user.playthrough += 1
+            user.progress = 0
             user.save()
             res.json(user)
         })
@@ -81,7 +77,8 @@ router.post('/register', (req, res) => {
                     name: req.body.name,
                     email: req.body.email,
                     password: req.body.password,
-                    ftp: true,
+                    playthrough: 0,
+                    progress: 0,
                     sanity: 0
                 })
                 bcrypt.genSalt(10, (err, salt) => {
@@ -116,7 +113,8 @@ router.post('/login', (req, res) => {
                             id: user.id,
                             name: user.name,
                             email: user.email,
-                            ftp: user.ftp,
+                            playthrough: user.playthrough,
+                            progress,
                             sanity: user.sanity
                         }
                         jwt.sign(
