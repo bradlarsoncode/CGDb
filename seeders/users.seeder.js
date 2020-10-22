@@ -7,8 +7,9 @@ const data = [
         name: 'Test Subject #666',
         email: '666@test.com',
         password: '$2a$10$BCtxz4YAiLHY0o/NEO0I2eXviXhYyzUZQZSD/831vLEKGjk454l/S',
-        ftp: 'true',
-        sanity: '0'
+        playthrough: 0,
+        progress: 0,
+        sanity: 0
     }
 
 
