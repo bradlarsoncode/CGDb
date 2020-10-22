@@ -16,8 +16,8 @@ const path = require('path');
 
 mongoose
 .connect(db, { useNewUrlParser: true })
-.then(() => console.log("Connected to MongoDB successfully"))
-.catch(err => console.log(err));
+// .then(() => console.log("Connected to MongoDB successfully")) brad commented out 10/22
+// .catch(err => console.log(err));
 
 app.use(bodyParser.urlencoded({ extended: false })); //allows postman
 app.use(bodyParser.json());
@@ -48,7 +48,7 @@ app.use("/api/questions", questions);
 
 const port = process.env.PORT || 5000;
 
-app.listen(port, () => console.log(`Server is running on port ${port}`));
+// app.listen(port, () => console.log(`Server is running on port ${port}`)); brad commented out 10/22
 
 
 
