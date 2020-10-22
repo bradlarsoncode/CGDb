@@ -76,9 +76,13 @@ Thank you for your interest in our program. Y̵̡̢̪̣̦̤̺͔̜̞͔̭̭̩͂͜�
 * Splash Page
 * Sign up, Log in and Log out
 
+![](./frontend/src/assets/Login.png)
+
 ## Questionnaire
 * fetch questions from db
 * Accept responses and handle updates to user's stats
+
+![](./frontend/src/assets/Questions_show.png)
 
 ## Game Logic
 * small puzzles in between sets of questions
