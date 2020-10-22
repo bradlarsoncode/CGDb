@@ -14,8 +14,12 @@ const UserSchema = new Schema({
         type: String,
         required: true
     },
-    ftp: {
-        type: Boolean,
+    playthrough: {
+        type: Number,
+        required: true
+    },
+    progress: {
+        type: Number,
         required: true
     },
     sanity: {
