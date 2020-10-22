@@ -52,6 +52,14 @@ class Navbar extends React.Component {
                 Logout
               </button>
             </div>
+            <div className="btn-link">
+              <button
+                onClick={() => this.props.openModal("links")}
+                className="link-inner"
+              >
+                About Us
+              </button>
+            </div>
           </div>
           <CustomAlert />
         </nav>
@@ -81,6 +89,14 @@ class Navbar extends React.Component {
                 className="link-inner"
               >
                 Log In
+              </button>
+            </div>
+            <div className="btn-link">
+              <button
+                onClick={() => this.props.openModal("links")}
+                className="link-inner"
+              >
+                About Us
               </button>
             </div>
           </div>

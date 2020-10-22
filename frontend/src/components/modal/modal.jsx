@@ -21,6 +21,8 @@ function Modal({ modal, closeModal }) {
       break;
     case "profile":
       component = <ProfileShowContainer />;
+    case "links":
+      // TODO add links component
     default:
       return null;
   }
