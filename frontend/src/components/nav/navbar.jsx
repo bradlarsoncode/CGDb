@@ -1,6 +1,6 @@
 import React from "react";
 import CustomAlert from "../modal/alerts";
-
+import {resetSanity} from '../../util/user_api_util'
 import { Link } from "react-router-dom";
 import "./navbar.scss";
 import logoPath from "../../assets/bramcollegeclear.png";
@@ -15,13 +15,16 @@ class Navbar extends React.Component {
 
   logoutUser(e) {
     e.preventDefault();
+    if (this.props.currentUser.email === '666@test.com'){
+      resetSanity('666@test.com')
+    }
     this.props.alertLogout();
     this.props.logout();
   }
   
   componentDidUpdate (prevProps) {
     if (prevProps.loggedIn !== this.props.loggedIn && this.props.loggedIn) {
-      this.props.alertLogin(this.props.currUser.name);
+      this.props.alertLogin(this.props.currentUser.name);
     } 
   }
 
@@ -32,7 +35,7 @@ class Navbar extends React.Component {
           <div className="logo-assets">
             <img src={logoPath} alt="logo" />
             <h1 className="brand-text">
-              <span>Welcome</span> {this.props.currUser.name}
+              <span>Welcome</span> {this.props.currentUser.name}
             </h1>
           </div>
           <div>

@@ -6,7 +6,7 @@ import { setAlert } from "../../reducers/alerts_reducers";
 
 const mapStateToProps = (state) => ({
   loggedIn: state.session.isAuthenticated,
-  currUser: state.session.user,
+  currentUser: state.session.user,
 });
 
 const mDTP = (dispatch) => ({

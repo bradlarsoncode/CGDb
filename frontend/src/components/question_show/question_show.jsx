@@ -26,8 +26,7 @@ export default class QuestionShow extends React.Component {
       this.setState({ errors: "" });
       const ns = Object.values(this.state.gpv).reduce((a, b) => a + b);
       this.props.updateSanity(this.props.currentUser.email, ns).then((user) => {
-        this.props.receiveCurrentUser(user.data);
-        this.props.updateProgress();
+        this.props.requestCurrentUser()
       });
     } else {
       this.setState({ errors: "Please answer all questions" });
@@ -35,17 +34,14 @@ export default class QuestionShow extends React.Component {
   }
 
   componentDidMount() {
-    if (this.props.progress) {
-      this.props.requestByProgress(this.props.progress);
-    } else {
-      this.props.resetProgress();
-      this.props.requestByProgress(this.props.progress);
-    }
+      this.props.requestCurrentUser();
+      this.props.requestByProgress(this.props.currentUser.progress);
+   
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.progress !== prevProps.progress) {
-      this.props.requestByProgress(this.props.progress);
+    if (this.props.currentUser.progress !== prevProps.currentUser.progress) {
+      this.props.requestByProgress(this.props.currentUser.progress);
     }
   }
 
@@ -63,7 +59,7 @@ export default class QuestionShow extends React.Component {
   render() {
     let message;
     let ui = <></>;
-    switch (this.props.progress) {
+    switch (this.props.currentUser.progress) {
       case 0:
         ui = (
           <audio
@@ -137,10 +133,10 @@ export default class QuestionShow extends React.Component {
 
     return (
       <div className={`question-part`}>
-        {questionPart[this.props.progress]}
-
+      
         <div className={`q-form q-form-container `}>
           <h3>{message}</h3>
+          <p className='sane-lvl'>{this.props.currentUser.sanity}</p>
           {ui}
           {this.props.questions ? (
             this.props.questions.map((question, i) => {

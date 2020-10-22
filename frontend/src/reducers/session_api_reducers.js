@@ -1,12 +1,10 @@
 
-import { RECEIVE_CURRENT_USER, RECEIVE_USER_LOGOUT, UPDATE_PROGRESS, RESET_PROGRESS } from '../actions/session_actions';
+import { RECEIVE_CURRENT_USER, RECEIVE_USER_LOGOUT } from '../actions/session_actions';
 
 const initialState = {
 isAuthenticated: false,
-user: {},
-progress: 0
+user: {}
 };
-
 
 export default function(state = initialState, action) {
 switch (action.type) {
@@ -19,14 +17,8 @@ case RECEIVE_CURRENT_USER:
 case RECEIVE_USER_LOGOUT:
  return {
    isAuthenticated: false,
-   user: undefined,
-   progress: 0
+   user: undefined
  };
-case UPDATE_PROGRESS:
-  return Object.assign({}, state, {progress: state.progress+1})
-  
-case RESET_PROGRESS:
-  return Object.assign({}, state, {progress: 0})
 
 default:
  return state;
