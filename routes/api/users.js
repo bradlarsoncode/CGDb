@@ -114,7 +114,7 @@ router.post('/login', (req, res) => {
                             name: user.name,
                             email: user.email,
                             playthrough: user.playthrough,
-                            progress,
+                            progress: user.progress,
                             sanity: user.sanity
                         }
                         jwt.sign(

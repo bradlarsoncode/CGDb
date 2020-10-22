@@ -4,10 +4,6 @@ import jwt_decode from "jwt-decode";
 export const RECEIVE_CURRENT_USER = "RECEIVE_CURRENT_USER";
 export const RECEIVE_SESSION_ERRORS = "RECEIVE_SESSION_ERRORS";
 export const RECEIVE_USER_LOGOUT = "RECEIVE_USER_LOGOUT";
-export const UPDATE_PROGRESS = "UPDATE_PROGRESS";
-export const RESET_PROGRESS = "RESET_PROGRESS";
-
-//TODO: remove redundant RECEIVE_USER_SIGN_IN
 
 export const receiveCurrentUser = (currentUser) => ({
   type: RECEIVE_CURRENT_USER,
@@ -23,13 +19,6 @@ export const logoutUser = () => ({
   type: RECEIVE_USER_LOGOUT,
 });
 
-export const updateProgress = () => ({
-  type: UPDATE_PROGRESS
-})
-
-export const resetProgress = () => ({
-  type: RESET_PROGRESS
-})
 
 export const signup = (user) => (dispatch) => {
   return APIUtil.signup(user).then(
@@ -42,21 +31,30 @@ export const signup = (user) => (dispatch) => {
   );
 };
 
-export const login = (user) => (dispatch) =>
+export const login = (user) => (dispatch) => {
   APIUtil.login(user)
     .then((res) => {
       const { token } = res.data;
       localStorage.setItem("jwtToken", token);
       APIUtil.setAuthToken(token);
       const decoded = jwt_decode(token);
+      
       dispatch(receiveCurrentUser(decoded));
     })
     .catch((err) => {
       dispatch(receiveErrors(err.response.data));
     });
+};
 
 export const logout = () => (dispatch) => {
   localStorage.removeItem("jwtToken");
   APIUtil.setAuthToken(false);
   dispatch(logoutUser());
 };
+
+
+export const requestCurrentUser = () => dispatch => {
+  APIUtil.currentUser().then(res => {
+    dispatch(receiveCurrentUser(res.data))
+  })
+}

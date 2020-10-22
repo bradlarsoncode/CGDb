@@ -13,6 +13,7 @@ export default class Home extends React.Component {
     }
     if (vid) setPlaySpeed();
   }
+
   render() {
     if (this.props.currentUser.sanity < -12) {
       this.props.resetSanity(this.props.currentUser.email);
@@ -32,7 +33,8 @@ export default class Home extends React.Component {
           <p>- Drs. Chris, Gio, Dennis and Brad</p>
         </div>
       );
-    } else if (this.props.progress && this.props.progress > 4) {
+      
+    } else if (this.props.currentUser.progress > 4) {
       setTimeout(() => { this.props.updateSanity(this.props.currentUser.email, -20)
         .then(resp => (this.props.receiveCurrentUser(resp.data))) }, 11000);
         return (

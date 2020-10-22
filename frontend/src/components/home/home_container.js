@@ -4,8 +4,7 @@ import { resetSanity, updateSanity } from '../../util/user_api_util'
 import { receiveCurrentUser } from '../../actions/session_actions';
 
 const mSTP = state => ({
-    currentUser: state.session.user,
-    progress: state.session.progress
+    currentUser: state.session.user
 });
 
 const mDTP = dispatch => ({
