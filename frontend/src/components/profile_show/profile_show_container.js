@@ -7,4 +7,4 @@ const mSTP = state => ({
     currentUser: state.session.user,
 });
 
-export default connect(mSTP)(ProfileShow)
+export default connect(mSTP, null)(ProfileShow)
