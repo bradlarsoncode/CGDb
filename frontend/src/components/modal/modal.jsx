@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import LoginFormContainer from "../session/login_form_container";
 import SignupFormContainer from "../session/signup_form_container";
 import ProfileShowContainer from "../profile_show/profile_show_container";
+import LinksShowContainer from "../links/links";
 import "./modal.scss";
 
 function Modal({ modal, closeModal }) {
@@ -21,8 +22,10 @@ function Modal({ modal, closeModal }) {
       break;
     case "profile":
       component = <ProfileShowContainer />;
+      break;
     case "links":
-      // TODO add links component
+      component = <LinksShowContainer />
+      break;
     default:
       return null;
   }
