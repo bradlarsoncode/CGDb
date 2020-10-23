@@ -4,8 +4,10 @@ $red: #7e1b1b;
 
 .modal-background {
   position: fixed;
-  top: 25%;
-  bottom: 0;
+  height: 100vw;
+  // top: 25%;
+  // bottom: 0;
+  // size: 500px;
   right: 0;
   left: 0;
   z-index: 10;
@@ -21,7 +23,7 @@ $red: #7e1b1b;
   width: 90%;
   min-width: 400px;
   max-width: 700px;
-  margin: 0 auto;
+  margin: 10% auto;
   padding: 25px;
 
   form {
