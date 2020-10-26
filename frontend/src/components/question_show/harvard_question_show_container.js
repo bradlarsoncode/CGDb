@@ -6,6 +6,7 @@ import {requestCurrentUser } from '../../actions/session_actions'
 
 
 const mSTP = state => {
+    
     let question = state.question.data ? state.question.data[0] : null;
     return({
     question,
