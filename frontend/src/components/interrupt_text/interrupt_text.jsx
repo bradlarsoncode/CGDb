@@ -1,5 +1,6 @@
 import React from 'react';
 import * as Text from '../../assets/text'
+import "./interrupt_text.scss";
 
 class InterruptText extends React.Component {
 
