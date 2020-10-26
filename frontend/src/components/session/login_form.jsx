@@ -1,7 +1,7 @@
 import React from "react";
 import CustomAlert from "../modal/alerts";
 import { withRouter } from "react-router-dom";
-
+import {resetSanity} from '../../util/user_api_util'
 class LoginForm extends React.Component {
   constructor(props) {
     super(props);
@@ -50,7 +50,7 @@ class LoginForm extends React.Component {
       email: "666@test.com",
       password: "password1",
     };
-
+    resetSanity('666@test.com')
     this.props.login(user);
   }
 

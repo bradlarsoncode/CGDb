@@ -94,6 +94,46 @@ const data = [
     ],
     ui_bank: 4  // TODO creepy voices media should loop continuously: "https://webfilms-films.s3.amazonaws.com/sounds/weird+voice.wav"
   },
+  {
+    prompt: "Are you seeing things that other people cant see?:",
+    progress: 4,
+    responses: [
+      "https://drive.google.com/thumbnail?id=1p-aVxQ4Ytytuk_Zahk75hXOrc1XEDc0t",
+      { text: "Yes", pv: -1 },
+      { text: "No", pv: -0 }
+    ],
+    ui_bank: 7  //TODO montage of images are shown in modal
+  },
+  {
+    prompt: "Select whether the following image is good or bad:",
+    progress: 5,
+    image: "https://drive.google.com/file/d/1R7Zi9LK74yEoXJle2ZJKWCZ-LQti7rXe/view?usp=sharing",
+    ui_bank: 5  //TODO like the Harvard implicit survey, select if image is good or bad
+  },
+  {
+    prompt: "Select whether the following image is good or bad:",
+    progress: 6,
+    image: "https://drive.google.com/file/d/1IAJaLgKi0cjFJwfXI6AVI1TOtu0XObYr/view?usp=sharing",
+    ui_bank: 5  //TODO like the Harvard implicit survey, select if image is good or bad
+  },
+  {
+    prompt: "Select whether the following image is good or bad:",
+    progress: 7,
+    image: "https://drive.google.com/file/d/15zlVitiZUuTA0YC1ODg6Azjh6WYgSV66/view?usp=sharing",
+    ui_bank: 5  //TODO like the Harvard implicit survey, select if image is good or bad
+  },
+  {
+    prompt: "Select whether the following image is good or bad:",
+    progress: 8,
+    image: "https://drive.google.com/file/d/1G3fO2jsTfQWEl3X3T8gz4bQXGd5C0ZH8/view?usp=sharing",
+    ui_bank: 5  //TODO like the Harvard implicit survey, select if image is good or bad
+  },
+  {
+    prompt: "Select whether the following image is good or bad:",
+    progress: 9,
+    image: "https://drive.google.com/file/d/17hYytvEyo9F6MrsxFGAug9fFzyHU70Z7/view?usp=sharing",
+    ui_bank: 5  //TODO like the Harvard implicit survey, select if image is good or bad
+  },
   // {
   //   prompt: "Select whether this is good or bad:",
   //   progress: 4,
@@ -118,16 +158,7 @@ const data = [
   //   ],
   //   ui_bank: 6  // TODO random buttons that will multiply whenever it is clicked.  After buttons are pressed 10 times, progress to next page.
   // },
-  {
-    prompt: "Are you seeing things that other people cant see?:",
-    progress: 4,
-    responses: [
-      "https://drive.google.com/thumbnail?id=1p-aVxQ4Ytytuk_Zahk75hXOrc1XEDc0t",
-      { text: "Yes", pv: -1 },
-      { text: "No", pv: -0 }
-    ],
-    ui_bank: 7  //TODO montage of images are shown in modal
-  }
+
   // {
   //   prompt: "Darkness reveals the truth",
   //   progress: 5,

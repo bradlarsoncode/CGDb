@@ -96,22 +96,36 @@ const data = [
   {
     prompt: "Select whether this is good or bad:",
     progress: 4,
-    responses: [
-      {
-        images: [
-          "https://drive.google.com/file/d/1R7Zi9LK74yEoXJle2ZJKWCZ-LQti7rXe/view?usp=sharing",
-          "https://drive.google.com/file/d/1IAJaLgKi0cjFJwfXI6AVI1TOtu0XObYr/view?usp=sharing",
-          "https://drive.google.com/file/d/15zlVitiZUuTA0YC1ODg6Azjh6WYgSV66/view?usp=sharing",
-          "https://drive.google.com/file/d/1G3fO2jsTfQWEl3X3T8gz4bQXGd5C0ZH8/view?usp=sharing",
-          "https://drive.google.com/file/d/17hYytvEyo9F6MrsxFGAug9fFzyHU70Z7/view?usp=sharing"
-        ]
-      }
-    ],
+    images: "https://drive.google.com/file/d/1R7Zi9LK74yEoXJle2ZJKWCZ-LQti7rXe/view?usp=sharing",
+    ui_bank: 5  //TODO like the Harvard implicit survey, select if image is good or bad
+  },
+  {
+    prompt: "Select whether this is good or bad:",
+    progress: 5,
+    images: "https://drive.google.com/file/d/1IAJaLgKi0cjFJwfXI6AVI1TOtu0XObYr/view?usp=sharing",
+    ui_bank: 5  //TODO like the Harvard implicit survey, select if image is good or bad
+  },
+  {
+    prompt: "Select whether this is good or bad:",
+    progress: 6,
+    images: "https://drive.google.com/file/d/15zlVitiZUuTA0YC1ODg6Azjh6WYgSV66/view?usp=sharing",
+    ui_bank: 5  //TODO like the Harvard implicit survey, select if image is good or bad
+  },
+  {
+    prompt: "Select whether this is good or bad:",
+    progress: 7,
+    images: "https://drive.google.com/file/d/1G3fO2jsTfQWEl3X3T8gz4bQXGd5C0ZH8/view?usp=sharing",
+    ui_bank: 5  //TODO like the Harvard implicit survey, select if image is good or bad
+  },
+  {
+    prompt: "Select whether this is good or bad:",
+    progress: 8,
+    images: "https://drive.google.com/file/d/17hYytvEyo9F6MrsxFGAug9fFzyHU70Z7/view?usp=sharing",
     ui_bank: 5  //TODO like the Harvard implicit survey, select if image is good or bad
   },
   {
     prompt: "Select the correct button",
-    progress: 5,
+    progress: 99,
     responses: [
       {pv: -1}
     ],
@@ -119,7 +133,7 @@ const data = [
   },
   {
     prompt: "Are you seeing things that other people cant see?:",
-    progress: 6,
+    progress: 99,
     responses: [
       "https://drive.google.com/file/d/1p-aVxQ4Ytytuk_Zahk75hXOrc1XEDc0t/view?usp=sharing",
       { text: "Yes", pv: -1 },
@@ -129,7 +143,7 @@ const data = [
   },
   {
     prompt: "Darkness reveals the truth",
-    progress: 7,
+    progress: 99,
     responses: [
       "https://drive.google.com/file/d/1nTxx3fUc2I48YnXLlbFSfle3vbm1xqvv/view?usp=sharing"
     ],
@@ -140,15 +154,15 @@ const data = [
 
 ]
 
-class QuestionsSeeder extends Seeder {
+// class QuestionsSeeder extends Seeder {
 
-  async shouldRun() {
-    return Question.countDocuments().exec().then(count => count === 0);
-  }
+//   async shouldRun() {
+//     return Question.countDocuments().exec().then(count => count === 0);
+//   }
 
-  async run() {
-    return Question.create(data);
-  }
-}
+//   async run() {
+//     return Question.create(data);
+//   }
+// }
 
-export default QuestionsSeeder;
+// export default QuestionsSeeder;

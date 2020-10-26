@@ -5,7 +5,7 @@ class InterruptText extends React.Component {
 
     render() {
         let scaryText
-        switch (1) { //TODO
+        switch (false) { //TODO
             case 1:
                 scaryText = Text.stare();
                 break;
