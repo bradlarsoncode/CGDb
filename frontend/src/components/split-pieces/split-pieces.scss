@@ -8,7 +8,6 @@
     display: grid;
     width: var(--w);
     height: var(--h);
-    //background: pink;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 1fr);
 
