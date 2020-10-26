@@ -8,10 +8,10 @@
     display: grid;
     width: var(--w);
     height: var(--h);
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
 
-    --img: url(https://img.mensxp.com/media/content/2020/Apr/header_5ea181f525d25.jpeg?h=194&w=412&cc=1);
+    --img: url(https://webfilms-films.s3.amazonaws.com/header_5ea181f525d25.jpg);
     --w: 60vmin;
     --h: 39vmin;
   }
