@@ -6,7 +6,7 @@ class InterruptText extends React.Component {
 
     render() {
         let scaryText
-        switch (false) { //TODO
+        switch (1) { //TODO
             case 1:
                 scaryText = Text.stare();
                 break;
@@ -24,9 +24,9 @@ class InterruptText extends React.Component {
                 break;
             default:
         }
-        // console.log(this.props.progress)
+        console.log(this.props)
         return (
-            <div>
+            <div className="fade-out">
                 {scaryText}
             </div>
         )
