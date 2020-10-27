@@ -8,7 +8,6 @@ const SplitPieces = ({email, updateSanity, receiveCurrentUser}) => {
       <a
         className="frame"
         onClick={() => updateSanity(email, 0).then(res => receiveCurrentUser(res.data))}
-        // onClick={() => console.log(updateSanity)}
       >
         <div className="slice"></div>
         <div className="slice"></div>
