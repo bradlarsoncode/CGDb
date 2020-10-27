@@ -26,6 +26,9 @@ const QuestionSchema = new Schema({
     ui_bank: {
         type: Number,
         required: true
+    },
+    image: {
+        type: String,
     }
 
 });

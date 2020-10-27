@@ -1,13 +1,13 @@
 import React from "react";
 import "./split-pieces.scss";
 
-const SplitPieces = () => {
+const SplitPieces = ({email, updateSanity, receiveCurrentUser}) => {
   return (
     <div className="split-pieces-container">
+      <h1>Make the Lady Pretty Again</h1>
       <a
         className="frame"
-        href="https://unsplash.com/photos/hEPmVFvF3Hs"
-        target="_blank"
+        onClick={() => updateSanity(email, 0).then(res => receiveCurrentUser(res.data))}
       >
         <div className="slice"></div>
         <div className="slice"></div>
@@ -77,5 +77,8 @@ const SplitPieces = () => {
     </div>
   );
 };
+
+
+
 
 export default SplitPieces;
