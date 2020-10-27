@@ -145,21 +145,18 @@ $red: #7e1b1b;
   max-width: 700px;
   margin: 0 auto;
   padding: 25px;
-  opacity: 0;
-  animation: hide ease 10s;
-  animation-fill-mode: forwards;
 }
 
 
 @keyframes hide {
   0% {
-    opacity: 0;
-    // transform: scale(0);
+    opacity: 1;
+    transform: scale(0);
   }
 
   100% {
-    opacity: 1;
-    // transform: scale(1.5);
+    opacity: 0;
+    transform: scale(1.5);
   }
 }
 

@@ -27,11 +27,17 @@ export default class QuestionShow extends React.Component {
       const ns = Object.values(this.state.gpv).reduce((a, b) => a + b);
       this.props.updateSanity(this.props.currentUser.email, ns).then((user) => {
         this.props.requestCurrentUser()
+        // this.fade()
       });
     } else {
       this.setState({ errors: "Please answer all questions" });
     }
   }
+
+  // fade() {
+  //   const div = document.getElementsByClassName("fade-out");
+  //   div.classList.add(" red")
+  // }
 
   componentDidMount() {
       this.props.requestCurrentUser();
