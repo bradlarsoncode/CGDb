@@ -133,6 +133,20 @@ $red: #7e1b1b;
   color: red;
 }
 
+#q-form-container {
+  color: #fefefe;
+  border-style: solid;
+  border-width: 1px;
+  border-color: $gold;
+  border-radius: 10px 10px 10px 10px;
+  background-image: linear-gradient(-90deg, #0c213ad1 0%, #b8995ce0 100%);
+  width: 90%;
+  min-width: 400px;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 25px;
+  opacity: 0;
+}
 .q-form-container {
   color: #fefefe;
   border-style: solid;
@@ -145,6 +159,10 @@ $red: #7e1b1b;
   max-width: 700px;
   margin: 0 auto;
   padding: 25px;
+  opacity: 0;
+  animation: hide ease 10s;
+  animation-delay: 10s;
+  animation-fill-mode: forwards;
 }
 
 .harvard-picture {
@@ -154,13 +172,13 @@ $red: #7e1b1b;
 
 @keyframes hide {
   0% {
-    opacity: 1;
-    transform: scale(0);
+    opacity: 0;
+    // transform: scale(0);
   }
 
   100% {
-    opacity: 0;
-    transform: scale(1.5);
+    opacity: 1;
+    // transform: scale(1.5);
   }
 }
 

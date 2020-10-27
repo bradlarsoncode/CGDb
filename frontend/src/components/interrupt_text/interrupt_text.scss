@@ -1,0 +1,43 @@
+
+#fade-out{
+  position: fixed;
+  top: 25%;
+  font-size: 35px;
+  text-align: center;
+  font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+  opacity: 0;
+}
+.fade-out{
+    position: fixed;
+    top: 25%;
+     z-index: 9;
+  animation: fadeOut ease 10s;
+  -webkit-animation: fadeOut ease 10s;
+  -moz-animation: fadeOut ease 10s;
+  -o-animation: fadeOut ease 10s;
+  -ms-animation: fadeOut ease 10s;
+  font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
+  font-size: 35px;
+  text-align: center;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity:0;
+  }
+  25% {
+      opacity:1;
+  }
+  50% {
+      opacity:1;
+  }
+  75% {
+      opacity:1;
+  }
+  100% {
+      display: none;
+      z-index: 0;
+    opacity:0;
+  }
+}

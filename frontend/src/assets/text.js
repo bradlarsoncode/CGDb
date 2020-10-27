@@ -4,7 +4,7 @@ import React from 'react';
 
 export const shadow = () => {
     return (
-        <div className="fade-out">
+        <div id="fade-out" className="fade-out">
             <p>A long black shadow slid across the pavement near their feet.
             They were barely in time to see the huge gray form of the carnivore 
             before it vanished 
@@ -31,7 +31,7 @@ export const shadow = () => {
 
 export const stare = () => {
   return (
-    <div className="fade-out">
+    <div id="fade-out" className="fade-out">
       <p>
         He had done everything right. There had been no mistakes. 
         It had been perfection and he knew it without a doubt,
@@ -44,7 +44,7 @@ export const stare = () => {
 
 export const balloon = () => {
   return (
-    <div className="fade-out">
+    <div id="fade-out" className="fade-out">
       <p>
         Balloons are pretty and they can even adjust sizes as needed. But don't
         make them too big or they might just pop, and then bye-bye balloon... 
@@ -56,7 +56,7 @@ export const balloon = () => {
 
 export const pennies = () => {
   return (
-    <div className="fade-out">
+    <div id="fade-out" className="fade-out">
       <p>
         One dollar and eighty-seven cents. That was all. And sixty cents of it
         was in pennies. Pennies saved one and two at a time. 
@@ -69,7 +69,7 @@ export const pennies = () => {
 
 export const amps = () => {
   return (
-    <div className="fade-out">
+    <div id="fade-out" className="fade-out">
       <p>
         It only takes .1 Amps to stop a human heart, any higher after that,
          you start to cook the person from the inside out.

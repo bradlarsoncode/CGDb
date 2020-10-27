@@ -27,10 +27,22 @@ export default class QuestionShow extends React.Component {
       const ns = Object.values(this.state.gpv).reduce((a, b) => a + b);
       this.props.updateSanity(this.props.currentUser.email, ns).then((user) => {
         this.props.requestCurrentUser()
+        this.fade()
       });
     } else {
       this.setState({ errors: "Please answer all questions" });
     }
+  }
+
+  fade() {
+    const text = document.getElementById("fade-out");
+    const question = document.getElementById("q-form-container")
+
+    text.classList.toggle("fade-out");
+    setTimeout(function () { text.classList.toggle("fade-out")}, 1000)
+
+    question.classList.toggle("q-form-container");
+    setTimeout(function () { question.classList.toggle("q-form-container")}, 1000)
   }
 
   componentDidMount() {
@@ -134,7 +146,7 @@ export default class QuestionShow extends React.Component {
     return (
       <div className={`question-part`}>
       
-        <div className={`q-form q-form-container `}>
+        <div className={`q-form q-form-container `} id="q-form-container">
           <h3>{message}</h3>
           <p className='sane-lvl'>{this.props.currentUser.sanity}</p>
           {ui}
