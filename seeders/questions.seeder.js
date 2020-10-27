@@ -96,7 +96,7 @@ const data = [
   },
   {
     prompt: "Are you seeing things that other people cant see?:",
-    progress: 4,
+    progress: 5,
     responses: [
       "https://drive.google.com/thumbnail?id=1p-aVxQ4Ytytuk_Zahk75hXOrc1XEDc0t",
       { text: "Yes", pv: -1 },
@@ -106,7 +106,7 @@ const data = [
   },
   {
     prompt: "Select whether the following image is good or bad:",
-    progress: 5,
+    progress: 10,
     image: "https://drive.google.com/file/d/1R7Zi9LK74yEoXJle2ZJKWCZ-LQti7rXe/view?usp=sharing",
     ui_bank: 5  //TODO like the Harvard implicit survey, select if image is good or bad
   },

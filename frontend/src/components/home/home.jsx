@@ -45,7 +45,7 @@ export default class Home extends React.Component {
             </div>
           )
     
-    } else if (this.props.currentUser.progress > 4) {
+    } else if (this.props.currentUser.progress > 5) {
       return (
         <div className="home-container" id="home-container">
           <InterruptText className="fade-out" />
