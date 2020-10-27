@@ -107,31 +107,31 @@ const data = [
   {
     prompt: "Select whether the following image is good or bad:",
     progress: 10,
-    image: "https://drive.google.com/file/d/1R7Zi9LK74yEoXJle2ZJKWCZ-LQti7rXe/view?usp=sharing",
+    image: "https://drive.google.com/thumbnail?id=1R7Zi9LK74yEoXJle2ZJKWCZ-LQti7rXe",
     ui_bank: 5  //TODO like the Harvard implicit survey, select if image is good or bad
   },
   {
     prompt: "Select whether the following image is good or bad:",
     progress: 6,
-    image: "https://drive.google.com/file/d/1IAJaLgKi0cjFJwfXI6AVI1TOtu0XObYr/view?usp=sharing",
+    image: "https://drive.google.com/thumbnail?id=1IAJaLgKi0cjFJwfXI6AVI1TOtu0XObYr",
     ui_bank: 5  //TODO like the Harvard implicit survey, select if image is good or bad
   },
   {
     prompt: "Select whether the following image is good or bad:",
     progress: 7,
-    image: "https://drive.google.com/file/d/15zlVitiZUuTA0YC1ODg6Azjh6WYgSV66/view?usp=sharing",
+    image: "https://drive.google.com/thumbnail?id=15zlVitiZUuTA0YC1ODg6Azjh6WYgSV66",
     ui_bank: 5  //TODO like the Harvard implicit survey, select if image is good or bad
   },
   {
     prompt: "Select whether the following image is good or bad:",
     progress: 8,
-    image: "https://drive.google.com/file/d/1G3fO2jsTfQWEl3X3T8gz4bQXGd5C0ZH8/view?usp=sharing",
+    image: "https://drive.google.com/thumbnail?id=1G3fO2jsTfQWEl3X3T8gz4bQXGd5C0ZH8",
     ui_bank: 5  //TODO like the Harvard implicit survey, select if image is good or bad
   },
   {
     prompt: "Select whether the following image is good or bad:",
     progress: 9,
-    image: "https://drive.google.com/file/d/17hYytvEyo9F6MrsxFGAug9fFzyHU70Z7/view?usp=sharing",
+    image: "https://drive.google.com/thumbnail?id=17hYytvEyo9F6MrsxFGAug9fFzyHU70Z7",
     ui_bank: 5  //TODO like the Harvard implicit survey, select if image is good or bad
   },
   // {
