@@ -78,4 +78,14 @@ export const amps = () => {
   );
 };
 
+export const filler = () => {
+  return (
+    <div id="fade-out" className="fade-out">
+      <p>
+
+      </p>
+    </div>
+  );
+};
+
 
