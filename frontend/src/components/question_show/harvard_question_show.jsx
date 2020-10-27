@@ -1,4 +1,5 @@
 import React from 'react';
+import "./question_show.scss";
 
 
 export default class HarvardQuestionShow extends React.Component {
@@ -34,14 +35,17 @@ export default class HarvardQuestionShow extends React.Component {
   render () {
     if (this.props.question === null) return null;
       return (
-      <div q-form-container>
+      <div className='q-form-container q-form'>
           <p>{this.props.question.prompt}</p>
           <img
             className="harvard-picture"
             src={this.props.question.image}
           />
+          <div className='yes-no'>
+
           <button onClick={this.handleSubmit}>Good</button>
           <button onClick={this.handleSubmit}>Bad</button>
+          </div>
       </div>)
   }
 }

@@ -3,6 +3,8 @@ import "./home.scss";
 import QuestionShow from "../question_show/question_show_container";
 import HarvardQuestionShow from '../question_show/harvard_question_show_container';
 import InterruptText from "../interrupt_text/interrupt_text_container";
+import SplitPieces from '../split-pieces/split-pieces';
+
 export default class Home extends React.Component {
   componentDidMount() {
     let vid;
@@ -51,10 +53,20 @@ export default class Home extends React.Component {
         </div>
       );
       
+    } else if (this.props.currentUser.progress === 4) {
+      return (
+        <div className="home-container" id="home-container">
+          <SplitPieces 
+          email={this.props.currentUser.email} 
+          updateSanity={this.props.updateSanity}
+          receiveCurrentUser={this.props.receiveCurrentUser}
+          />
+        </div>
+      );
+      
+      
+      
     } 
-    
-    
-    
     else {
       return (
         <div className="home-container" id="home-container">
