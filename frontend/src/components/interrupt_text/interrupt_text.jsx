@@ -22,6 +22,12 @@ class InterruptText extends React.Component {
             case 4:
                 scaryText = Text.shadow();
                 break;
+            case 5:
+                scaryText = Text.steps();
+                break;
+             case 6:
+                scaryText = Text.skin();
+                break;
             default:
                 scaryText = Text.filler();
         }

@@ -19,10 +19,13 @@
   font-family: "Goudy Old Style", Garamond, "Big Caslon", "Times New Roman", serif;
   font-size: 35px;
   text-align: center;
-  margin-top: 200px;
-  margin-left: 400px;
-  margin-right: 400px;
+  // margin-top: 200px;
+  // margin-left: 400px;
+  // margin-right: 400px;
   animation-fill-mode: forwards;
+  left: 50%;
+  margin-top: 400px;
+  transform: translate(-50%, -50%);
 }
 
 @keyframes fadeOut {

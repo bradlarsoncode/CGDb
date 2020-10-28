@@ -11,7 +11,7 @@ export default class Home extends React.Component {
     if (document.getElementById("background-video"))
       vid = document.getElementById("background-video");
     function setPlaySpeed() {
-      vid.playbackRate = 0.7;
+      vid.playbackRate = .7;
     }
     if (vid) setPlaySpeed();
   }
