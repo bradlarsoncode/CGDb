@@ -5,7 +5,7 @@ const DarkPage = () => {
   window.addEventListener("DOMContentLoaded", () => {
     const spotlight = document.querySelector(".spotlight");
 
-    let spotlightSize = "transparent 50px, rgba(0, 0, 0, 1) 50px)";
+    let spotlightSize = "transparent 50px, rgba(0, 0, 0, 1) 350px)";
 
     window.addEventListener("mousemove", (e) => updateSpotlight(e));
 

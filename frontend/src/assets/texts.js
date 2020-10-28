@@ -1,6 +1,5 @@
 import React from "react";
 //A long black shadow slid across the pavement near their feet. They were barely in time to see the huge gray form of the carnivore before it vanished behind a veil of smoke.
-//Can we add an effect where the
 
 export const shadow = () => {
   return (
@@ -18,7 +17,7 @@ export const stare = () => {
   return (
     <div>
       <p>
-        He had done everything right. There had been no mistakes. It had been
+        He had done everything right.There had been no mistakes. It had been
         perfection and he knew it without a doubt, but the results still stared
         back at him with a vacant look only the dead know.
       </p>
@@ -60,3 +59,5 @@ export const amps = () => {
     </div>
   );
 };
+
+
