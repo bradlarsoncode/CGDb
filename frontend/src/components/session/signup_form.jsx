@@ -58,6 +58,7 @@ class SignupForm extends React.Component {
     return (
       <div className="signup-form-container">
         <form onSubmit={this.handleSubmit}>
+           <h3 className="modal-header">Sign Up</h3>
           <div className="signup-form">
             <br />
             <input

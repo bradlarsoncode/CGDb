@@ -67,8 +67,10 @@ class LoginForm extends React.Component {
   render() {
     return (
       <div>
+        
         <form onSubmit={this.handleSubmit}>
           <div>
+            <h3 className="modal-header">Log In</h3>
             <input
               type="text"
               value={this.state.email}

@@ -3,6 +3,7 @@ import React from 'react';
 function Links () {
     return (
         <div>
+             <h3 className="modal-header">About Us</h3>
             <h2><a href="https://github.com/Arsoni5t/CGDb"> Github</a></h2>
             <br/>
             <h2>Meet the team:</h2>
