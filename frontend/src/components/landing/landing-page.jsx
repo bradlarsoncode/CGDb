@@ -13,31 +13,12 @@ const mDTP = dispatch => ({
 class MainPage extends React.Component {
   render() {
     return (
-      <div className="landing-parent ">
-        {!this.props.modal ? (
-        <div className="session-buttons">
-          <div className="btn-link">
-            <button
-              onClick={() => this.props.openModal("signup")}
-              className="link-inner"
-            >
-              Sign Up
-            </button>
-          </div>
-          <h3>or</h3>
-          <div className="btn-link">
-            <button
-              onClick={() => this.props.openModal("login")}
-              className="link-inner"
-            >
-              Log In
-            </button>
-          </div>
-        </div>
-        ) : (<></>)}
+       <div className="landing-parent ">
+      
 
       <div className="landing-container ">
-        {/* <h2 className="modal-header">Log In or Sign Up To Start</h2> */}
+        
+        <h2 className="modal-header">Thank you for your participation</h2>
         <p>
           Founded in 1992 at Bram College, the goal of our database is to track
           the decline of mental health through a series of questions targeting
@@ -54,6 +35,27 @@ class MainPage extends React.Component {
           fighting off psychotic disorders/behavior
         </p>
         <p>Note: This site is designed for adults, aged 18 or older.</p>
+           {!this.props.modal ? (
+        <div className="session-buttons">
+           <div className="btn-link">
+            <button
+              onClick={() => this.props.openModal("signup")}
+              className="link-inner"
+            >
+              Sign Up
+           </button>
+          </div>
+           <h3>or</h3>
+          <div className="btn-link">
+            <button
+              onClick={() => this.props.openModal("login")}
+              className="link-inner"
+            >
+              Log In
+          </button>
+          </div>
+         </div>
+         ) : (<></>)}
       </div>
       </div>
     );
