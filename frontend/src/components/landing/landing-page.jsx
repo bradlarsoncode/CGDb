@@ -13,7 +13,8 @@ const mDTP = dispatch => ({
 class MainPage extends React.Component {
   render() {
     return (
-       <div className="landing-parent ">
+      <div className="landing-parent ">
+              {!this.props.modal ? (
       
 
       <div className="landing-container ">
@@ -35,7 +36,6 @@ class MainPage extends React.Component {
           fighting off psychotic disorders/behavior
         </p>
         <p>Note: This site is designed for adults, aged 18 or older.</p>
-           {!this.props.modal ? (
         <div className="session-buttons">
            <div className="btn-link">
             <button
@@ -55,8 +55,8 @@ class MainPage extends React.Component {
           </button>
           </div>
          </div>
-         ) : (<></>)}
       </div>
+      ) : (<></>)}
       </div>
     );
   }
