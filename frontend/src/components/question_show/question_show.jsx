@@ -39,10 +39,10 @@ export default class QuestionShow extends React.Component {
     const question = document.getElementById("q-form-container")
 
     text.classList.toggle("fade-out");
-    setTimeout(function () { text.classList.toggle("fade-out")}, 1000)
+    setTimeout(function () { text.classList.toggle("fade-out")}, 500)
 
     question.classList.toggle("q-form-container");
-    setTimeout(function () { question.classList.toggle("q-form-container")}, 1000)
+    setTimeout(function () { question.classList.toggle("q-form-container")}, 500)
   }
 
   componentDidMount() {
@@ -148,7 +148,6 @@ export default class QuestionShow extends React.Component {
       
         <div className={`q-form q-form-container `} id="q-form-container">
           <h3>{message}</h3>
-          <p className='sane-lvl'>{this.props.currentUser.sanity}</p>
           {ui}
           {this.props.questions ? (
             this.props.questions.map((question, i) => {

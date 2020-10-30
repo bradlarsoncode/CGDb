@@ -21,11 +21,11 @@ class Navbar extends React.Component {
     this.props.alertLogout();
     this.props.logout();
   }
-  
+
   componentDidUpdate (prevProps) {
     if (prevProps.loggedIn !== this.props.loggedIn && this.props.loggedIn) {
       this.props.alertLogin(this.props.currentUser.name);
-    } 
+    }
   }
 
   getLinks() {
@@ -75,22 +75,7 @@ class Navbar extends React.Component {
             </h1>
           </div>
           <div>
-            <div className="btn-link">
-              <button
-                onClick={() => this.props.openModal("signup")}
-                className="link-inner"
-              >
-                Sign Up
-              </button>
-            </div>
-            <div className="btn-link">
-              <button
-                onClick={() => this.props.openModal("login")}
-                className="link-inner"
-              >
-                Log In
-              </button>
-            </div>
+ 
             <div className="btn-link">
               <button
                 onClick={() => this.props.openModal("links")}

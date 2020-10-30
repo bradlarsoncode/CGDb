@@ -34,6 +34,16 @@ $red: #7e1b1b;
   }
 }
 
+.session-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 300px;
+  h3 {
+    color: #b8995b;
+  }
+}
+
 @keyframes glitch-flicker {
   0% {
     color: $blue;
