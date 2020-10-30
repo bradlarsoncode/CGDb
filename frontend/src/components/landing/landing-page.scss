@@ -16,19 +16,34 @@ $red: #7e1b1b;
 }
 
 .landing-container {
-  position: absolute;
-  width: 99%;
-  background-color: #0b151df0;
-  color: #b8995b;
-  text-shadow: 0 0 2px #b8995b;
-  font-size: larger;
-  display: flex;
-  flex-direction: column;
-  border: 2px solid #b8995b;
-  border-radius: 5px;
-  bottom: 0;
-  left: 0.35%;
-
+  // position: absolute;
+  // width: 99%;
+  // background-color: #0b151df0;
+  // color: #b8995b;
+  // text-shadow: 0 0 2px #b8995b;
+  // font-size: larger;
+  // display: flex;
+  // flex-direction: column;
+  // border: 2px solid #b8995b;
+  // border-radius: 5px;
+  // bottom: 0;
+  // left: 0.35%;
+    position: absolute;
+    width: 33%;
+    background-color: #0b151df0;
+    color: #b8995b;
+    text-shadow: 0 0 1px #b8995b;
+    font-size: larger;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #b8995b;
+    border-radius: 5px;
+    left: 50%;
+    top: 70%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    padding-top: 40px;
+    padding-bottom: 40px;
   p {
     padding: 10px;
   }

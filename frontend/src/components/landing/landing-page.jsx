@@ -5,6 +5,7 @@ class MainPage extends React.Component {
   render() {
     return (
       <div className="landing-container ">
+        {/* <h2 className="modal-header">Log In or Sign Up To Start</h2> */}
         <p>
           Founded in 1992 at Bram College, the goal of our database is to track
           the decline of mental health through a series of questions targeting
